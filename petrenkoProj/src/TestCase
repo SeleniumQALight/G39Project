@@ -3,6 +3,7 @@ Preconditions
 go to http://v3.test.itpmgroup.com/login   and login
 login  :Student
 pasword:909090
+///////////////////////////////////////////////////////////
 
 1.
                Title
@@ -26,41 +27,61 @@ pasword:909090
                1)Add new user
 
                Title
-                              Add new user by sidebar-menu with fild that already exists in created users
+               Add new user by sidebar-menu with fild that already exists in created users
 
-                              Steps
-                              1)Click "Словари" on left sidebar-menu.
-                              2)Click on the right top icon "+"
-                              3)Fill in the fields as created by user in preconditions
-                              4)Click "Создать"
+               Steps
+               1)Click "Словари" on left sidebar-menu.
+               2)Click on the right top icon "+"
+               3)Fill in the fields as created by user in preconditions
+               4)Click "Создать"
 
-                              Expected Result
-                              1)Message: This user already exists
+               Expected Result
+               1)Message
 
-                              PostConditions
-                              1) Delete new users
+               PostConditions
+               1) Delete new users
 
 3.
-                             Title
-                             Change data in  profile
+               Title
+               Change data in  profile
 
-                             Steps
-                             1)Click on the top right coner icon.
-                             2)Click button "Профиль"
-                             3)Edit filds
-                             4)Click button "Сохранить"
+               Steps
+               1)Click on the top right coner icon.
+               2)Click button "Профиль"
+               3)Edit filds
+               4)Click button "Сохранить"
 
-                             Expected Result
-                             1)Data in profile was change
-
-
+               Expected Result
+               1)Data in profile was change
 
 4.
+               Title
+               Add new "Установка"
+
                Steps
+               1)Click "Установка" on left sidebar-menu.
+               2)Click on the right top icon "+"
+               3)Fill out all filds
+               4)Click "Создать"
 
                Expected Result
+               1)New element in "Установка" was create.
+
+               PostConditions
+               1) Delete new element from "Установка"
 
 5.
+               Title
+               Add new "Обслуживание"
+
                Steps
+               1)Click "Обслуживание" on left sidebar-menu.
+               2)Click on the right top icon "+"
+               3)Fill out all filds
+               4)Click "Создать"
 
                Expected Result
+               1)New element in "Обслуживание" was create.
+
+               PostConditions
+               1) Delete new element from "Обслуживание"
