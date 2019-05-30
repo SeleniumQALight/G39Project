@@ -1,0 +1,66 @@
+Preconditions
+
+go to http://v3.test.itpmgroup.com/login   and login
+login  :Student
+pasword:909090
+
+1.
+               Title
+               Add new user by  sidebar-menu
+
+               Steps
+               1)Click "Словари" on left sidebar-menu.
+               2)Click "Сотрудники"
+               3)Click on the right top icon "+"
+               4)Fill out all filds
+               5)Click "Создать"
+
+               Expected Result
+               1)New user was create.
+
+               PostConditions
+               1) Delete new user
+
+2.
+               Preconditions
+               1)Add new user
+
+               Title
+                              Add new user by sidebar-menu with fild that already exists in created users
+
+                              Steps
+                              1)Click "Словари" on left sidebar-menu.
+                              2)Click on the right top icon "+"
+                              3)Fill in the fields as created by user in preconditions
+                              4)Click "Создать"
+
+                              Expected Result
+                              1)Message: This user already exists
+
+                              PostConditions
+                              1) Delete new users
+
+3.
+                             Title
+                             Cgange profil
+
+                             Steps
+                             1)Click "Словари" on left sidebar-menu.
+                             2)Click on the right top icon "+"
+                             3)Fill in the fields as created by user in preconditions
+                             4)Click "Создать"
+
+                             Expected Result
+                             1)Message: This user already exists
+
+
+
+4.
+               Steps
+
+               Expected Result
+
+5.
+               Steps
+
+               Expected Result
