@@ -42,16 +42,16 @@ pasword:909090
 
 3.
                              Title
-                             Cgange profil
+                             Change data in  profile
 
                              Steps
-                             1)Click "Словари" on left sidebar-menu.
-                             2)Click on the right top icon "+"
-                             3)Fill in the fields as created by user in preconditions
-                             4)Click "Создать"
+                             1)Click on the top right coner icon.
+                             2)Click button "Профиль"
+                             3)Edit filds
+                             4)Click button "Сохранить"
 
                              Expected Result
-                             1)Message: This user already exists
+                             1)Data in profile was change
 
 
 
