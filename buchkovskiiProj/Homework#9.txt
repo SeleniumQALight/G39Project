@@ -5,13 +5,11 @@ Steps:
 1) Go to the site
 2) Open to the "Аппарат" dictionary 
 3) Add the new "Apparat"
-4) Input "asdasdasdasdasd" in the "Apparat number" field
-5) Look in the new apparat in the "Apparat" list after adding. 
+4) Input " " in the "Apparat number" field
+4) Input " " in the "Apparat comment" field
+5) Take attention in the anything notifications 
 
-Actual result: The new apparat is created on the "Apparat" item menu after input invalid data in the "Apparat number" field.
 Expected result: The new apparat isn't created on the "Apparat" item menu after input invalid data in the "Apparat number" field.
-
-Summery: The new apparat is created on the "Apparat" item menu after input invalid data in the "Apparat number" field.
 
 ID: 2
 Summery: The page is empty on the "Dictionary" list after clicking the "Словари" bread crumbs link
@@ -20,10 +18,9 @@ Steps:
 1) Go to the site
 2) Open to the "Аппарат" dictionary
 3) Click on the "Словари" bread crumbs link
-4) Take attention in the opened page
+4) Take attention on the points in the opened page
 
-Actual result: The page is empty on the "Dictionary" list after clicking the "Словари" bread crumbs link
-Expected result: The page is opened on the "Dictionary" list after clicking the "Словари" bread crumbs link
+Expected result: The "Словари" is opened on the "Dictionary" list after clicking the "Словари" bread crumbs link
 
 ID: 3
 Summery: The "Error" message isn't displayed on the "Сотрудники" item menu after inputing "aaaaaaaa" in the "Phone number" field
@@ -35,7 +32,6 @@ Steps:
 4) Input "aaaaaaaaa" in the "Phone number" field
 5) Take attention in the anything notifications
 
-Actual result: The "Error" message isn't displayed on the "Сотрудники" item menu after inputing "aaaaaaaa" in the "Phone number" field
 Expected result: The "Error" message is displayed on the "Сотрудники" item menu after inputing "aaaaaaaa" in the "Phone number" field
 
 ID: 4
@@ -48,7 +44,6 @@ Steps:
 4) Input "aaaaaaaaa.. .." in the "Spare name" field
 5) Take attention in the anything notifications
 
-Actual result: The new "Запчасти" is created on the "Запчасти" dictionary after adding 1000 letters in the "Spare name" field
 Expected result: The new "Запчасти" isn't created on the "Запчасти" dictionary after adding 1000 letters in the "Spare name" field
 
 ID: 5
@@ -61,7 +56,6 @@ Steps:
 4) Click the "Удалить" button
 5) Take attention on the page
 
-Actual result: The "404" page is opened on the "Стороны сделок" dictionary after deleting a deal  
 Expected result: The deal is deleted on the "Стороны сделок" dictionary after click the "Удалить" button 
 
 ID: 6
@@ -74,5 +68,4 @@ Steps:
 4) Input " " in the "Deal type name" field
 5) Take attention on the page
 
-Actual result: The "404" page is opened on the "Типы сделок" dictionary after creating the new "Типы сделок" with " " in the "Deal type name" field
 Expected result: The "404" page isn't opened on the "Типы сделок" dictionary after creating the new "Типы сделок" with " " in the "Deal type name" field
