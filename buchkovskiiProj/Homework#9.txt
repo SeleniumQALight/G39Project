@@ -5,9 +5,9 @@ Steps:
 1) Go to the site
 2) Open to the "Аппарат" dictionary 
 3) Add the new "Apparat"
-4) Input " " in the "Apparat number" field
-4) Input " " in the "Apparat comment" field
-5) Take attention in the anything notifications 
+4) Input "%" in the "Apparat number" field
+4) Input "%" in the "Apparat comment" field
+5) Take attention on anything notifications
 
 Expected result: The new apparat isn't created on the "Apparat" item menu after input invalid data in the "Apparat number" field.
 
@@ -23,19 +23,19 @@ Steps:
 Expected result: The "Словари" is opened on the "Dictionary" list after clicking the "Словари" bread crumbs link
 
 ID: 3
-Summery: The "Error" message isn't displayed on the "Сотрудники" item menu after inputing "aaaaaaaa" in the "Phone number" field
+Summery: The "Invalid data" message isn't displayed on the "Сотрудники" item menu after inputing "aaaaaaaa" in the "Worker phone" field
 
 Steps:
 1) Go to the site
 2) Open to the "Сотрудники" dictionary 
 3) Click on the "Plus" button
-4) Input "aaaaaaaaa" in the "Phone number" field
+4) Input "aaaaaaaaa" in the "Worker phone" field
 5) Take attention in the anything notifications
 
-Expected result: The "Error" message is displayed on the "Сотрудники" item menu after inputing "aaaaaaaa" in the "Phone number" field
+Expected result: The "Invalid data" message is displayed on the "Сотрудники" item menu after inputing "aaaaaaaa" in the "Worker phone" field
 
 ID: 4
-Summery: The new "Запчасти" is created on the "Запчасти" dictionary after adding 1000 letters in the "Spare name" field
+Summery: The new "Запчасти" is created on the "Запчасти" dictionary after adding an infinite number of symbols in the "Spare name" field
 
 Steps:
 1) Go to the site
@@ -44,7 +44,7 @@ Steps:
 4) Input "aaaaaaaaa.. .." in the "Spare name" field
 5) Take attention in the anything notifications
 
-Expected result: The new "Запчасти" isn't created on the "Запчасти" dictionary after adding 1000 letters in the "Spare name" field
+Expected result: The new "Запчасти" isn't created on the "Запчасти" dictionary after adding an infinite number of symbols in the "Spare name" field
 
 ID: 5
 Summery: The "404" page is opened on the "Стороны сделок" dictionary after deleting a deal  
