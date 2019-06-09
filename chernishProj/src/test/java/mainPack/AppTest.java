@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /**
- * Unit test for simple App.test090619
+ * Unit test for simple App.test090619 new branch
  */
 public class AppTest 
 {
