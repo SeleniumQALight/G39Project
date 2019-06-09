@@ -1,0 +1,53 @@
+Case1
+Creation of new entity in Dictionaries->Apparatus
+
+1. Open main page http://v3.test.itpmgroup.com/. —> Page is opened
+2. Go to Dictionaries->Apparatus —> Page http://v3.test.itpmgroup.com/dictionary/apparat is opened. List of entries created previously is visible and scrollable
+3. Press “+” (add) -> Page for creation new entity is opened (http://v3.test.itpmgroup.com/dictionary/apparat/edit). Fields “Apparat number” and “Apparat comment” are visible and empty. Button “Create” is visible.
+4. Leave fields empty and try to press “Create” -> Error message will displayed til Fields stay empty.
+5. Fill 3 spaces in to the fields “Apparat number” and “Apparat comment”. Press “Create” —> Error message will displayed til Fields stay empty.
+6. Fill number to the field “Apparat number” (123 - for example) and fill text to the field “Apparat comment” (test comment - for example). Press “Create” —> New entity with ID 123 and comment “test comment” is visible in the list on the page http://v3.test.itpmgroup.com/dictionary/apparat
+7. Fill text to the field “Apparat number” (test - for example) and fill text to the field “Apparat comment” (test comment - for example). Press “Create” —> Error message will displayed until user input numbers to the field “Apparat number”
+
+Case2
+Edit the entity in Dictionaries->Apparatus
+1. Open main page http://v3.test.itpmgroup.com/. —> Page is opened
+2. Go to Dictionaries->Apparatus —> Page http://v3.test.itpmgroup.com/dictionary/apparat is opened. List of entries created previously is visible and scrollable
+3. Choose previously created entity with ID 123 and comment “test comment”. Click on it. —> Editing window opened
+4. Change nothing. Press “Save”—> Page http://v3.test.itpmgroup.com/dictionary/apparat is opened. List of entries created previously is visible and scrollable
+5. Choose previously created entity with ID 123 and comment “test comment”. Click on it. —> Editing window opened
+6. Change comment to “test editing”. Press “Save” —> For current entity comment was changed to “test editing”. Page http://v3.test.itpmgroup.com/dictionary/apparat is opened. List of entries created previously is visible and scrollable
+
+Case3
+Delete the entity in Dictionaries->Apparatus
+1. Open main page http://v3.test.itpmgroup.com/. —> Page is opened
+2. Go to Dictionaries->Apparatus —> Page http://v3.test.itpmgroup.com/dictionary/apparat is opened. List of entries created previously is visible and scrollable
+3. Choose previously created entity with ID 123 and comment “test comment”. Click on it. —> Editing window opened
+4. Press “Delete” —>Entity was deleted. Page http://v3.test.itpmgroup.com/dictionary/apparat is opened. List of entries created previously is visible and scrollable
+5. Refresh page http://v3.test.itpmgroup.com/dictionary/apparat is opened. —>Deleted entity doesn’t appear in the list
+
+
+Case4
+Creation of new entity in the Deals list
+1. Open main page http://v3.test.itpmgroup.com/. —> Page is opened
+2. Go to Deals —> Page http://v3.test.itpmgroup.com/deal is opened. List of entries created previously is visible and scrollable
+3. Press “+” (add) -> Page for creation new entity is opened (http://v3.test.itpmgroup.com/deal/edit). Fields “Deal date”, “Type of deal”, “Buyer" and “Producer” are visible and empty. Button “Create” is visible.
+4. Leave fields empty and try to press “Create” -> Error message will displayed til Fields stay empty.
+5. For field “Type of deal” choose first recording from the drop-down list. Leave other fields empty and press “Create” —>  Error message will displayed til Fields stay empty.
+5. For field “Buyer” choose first recording from the drop-down list. Leave other fields empty and press “Create” —>  Error message will displayed til Fields stay empty.
+6. For field “Producer” choose first recording from the drop-down list. Leave other fields empty and press “Create” —>  Error message will displayed til Fields stay empty.
+7. Fill all fields from drop-down lists. Press “Create” —> new entity was created and is visible on the list on page http://v3.test.itpmgroup.com/deal
+
+Case5
+Creation and usage of new type of the deal
+
+1. Open main page http://v3.test.itpmgroup.com/. —> Page is opened
+2. Go to Dictionaries->Type of the deals —> Page http://v3.test.itpmgroup.com/dictionary/deal_type is opened. List of entries created previously is visible and scrollable
+3. Press “+” (add) -> Page for creation new entity is opened (http://v3.test.itpmgroup.com/dictionary/deal_type/edit). Field “Deal type name” is visible and empty. Button “Create” is visible.
+4. Input name for new type of the deal (YuliiaTest - for example. Press “Create” —> New type of the deal was added
+5. Go to the page with list of the deals (http://v3.test.itpmgroup.com/deal) ->>Page is opened
+6. Press “+” (add) -> Page for creation new entity is opened (http://v3.test.itpmgroup.com/deal/edit). Fields “Deal date”, “Type of deal”, “Buyer" and “Producer” are visible and empty. Button “Create” is visible.
+7. For field “Type of deal” choose new type from the drop-down list (YuliiaTest) —>New type selected for new deal
+8. Fill all other fields from drop-down lists. Press “Create” —> new entity was created and is visible on the list on page http://v3.test.itpmgroup.com/deal
+
+
