@@ -1,0 +1,39 @@
+http://motomen.com.ua/
+
+TC1
+Go to home page
+Click to Magnifier button with empty search text field
+ER: Message "Please fill out this field"
+
+TC2
+Go to home page
+On header click to Facebook icon
+ER: Link https://www.facebook.com/Motomen-248230888640558/ is opened
+
+TC3
+Open "Akcii" tab
+Select some product
+On opened product page click to "kupit" button
+Go to basket (click to "oformit zakaz" on header)
+On opened window input valid parameters:
+ - Имя - test
+ - Телефон - 1234
+ - Эл. почта - bla@bla.bla
+ - Город - test
+ - Способ доставки - Новая почта
+ - Номер склада «Новой почты» - 1
+Click to "Oformit zakaz"
+ER: "ВАШ ЗАКАЗ ОТПРАВЛЕН!" message and on admin panel order is present with same info
+
+TC4
+Go to home page
+Input to search text field for ex. "1"
+Click to Magnifier button
+ER: max 50 product displayed on 1 page
+
+TC5
+Go to home page
+Input to search text field for ex. "1"
+Click to Magnifier button
+Select some product on search page
+ER: product page is opened, no any errors
