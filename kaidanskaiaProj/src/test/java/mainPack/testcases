@@ -1,0 +1,27 @@
+Create new employee
+Preconditions:
+1. Open http://v3.test.itpmgroup.com/
+2. Login as student // 909090
+
+Steps to reproduce:
+
+1. Go to section "Словари" in left menu
+2. Open tab "Сотрудники"
+3. Click on "+" button in right top corner
+4. Fill the form. eg:
+Worker surname -> Jurov
+Worker name -> Petro
+Worker middle name -> Ivanovych
+Worker phone -> 876765657767686
+5. Click on button "Создать"
+
+Expected result
+
+New user Jurov Petro Ivanovych created, form is closed,
+user is redirected to employees list. New created employee is shown in the end of this list
+
+
+
+
+
+
