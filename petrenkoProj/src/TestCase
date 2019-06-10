@@ -1,0 +1,206 @@
+Preconditions
+
+go to http://v3.test.itpmgroup.com/login   and login
+login  :Student
+pasword:909090
+///////////////////////////////////////////////////////////
+
+1.
+               Title
+               Add new user by  sidebar-menu to "Словари"/"Сотрудники"
+
+               Steps
+               1)Click "Словари" on left sidebar-menu.
+               2)Click "Сотрудники"
+               3)Click on the right top icon "+"
+               4)Fill out
+               a. Worker surname - Petrenko
+               b. Worker name - Yura
+               c. Worker middle name - Anatolijovich
+               d. Woker phone - +380670000000
+               5)Click "Создать"
+
+               Expected Result
+
+               1)Click "Словари" on left sidebar-menu.
+               2)Click "Сотрудники"
+               3)Find user with such parameters
+               a. Worker surname - Petrenko
+               b. Worker name - Yura
+               c. Worker middle name - Anatolijovich
+               d. Woker phone - +380670000000
+               4) Go in profile of user and check all parametrs
+               5) User created.
+
+               PostConditions
+               1)Click "Словари" on left sidebar-menu.
+               2)Click "Сотрудники"
+               3)Find user with such parameters
+               a. Worker surname - Petrenko
+               b. Worker name - Yura
+               c. Worker middle name - Anatolijovich
+               d. Woker phone - +380670000000
+               4) Go in profile of user
+               5) Click button "Удалить"
+
+2.
+               Title
+               Delete user by  sidebar-menu from "Словари"/"Сотрудники"
+               Preconditions
+               1)Click "Словари" on left sidebar-menu.
+               2)Click "Сотрудники"
+               3)Click on the right top icon "+"
+               4)Fill out
+               a. Worker surname - Petrenko
+               b. Worker name - Yura
+               c. Worker middle name - Anatolijovich
+               d. Woker phone - +380670000000
+               5)Click "Создать"
+
+               Steps
+               1)Click "Словари" on left sidebar-menu.
+               2)Click "Сотрудники"
+               3)Find user with such parameters
+               a. Worker surname - Petrenko
+               b. Worker name - Yura
+               c. Worker middle name - Anatolijovich
+               d. Woker phone - +380670000000
+               4) Go in profile of user and check all parametrs
+               5) Click button "Удалить"
+
+               Expected Result
+               1)Click "Словари" on left sidebar-menu.
+               2)Click "Сотрудники"
+               3)Find user with such parameters
+               a. Worker surname - Petrenko
+               b. Worker name - Yura
+               c. Worker middle name - Anatolijovich
+               d. Woker phone - +380670000000
+               4) User with such parameters absent
+
+3.
+               Title
+               Edit parametrs of user by sidebar-menu in "Словари"/"Сотрудники"
+
+               Preconditions
+               1)Click "Словари" on left sidebar-menu.
+               2)Click "Сотрудники"
+               3)Click on the right top icon "+"
+               4)Fill out
+               a. Worker surname - Petrenko
+               b. Worker name - Yura
+               c. Worker middle name - Anatolijovich
+               d. Woker phone - +380670000000
+               5)Click "Создать"
+
+               Steps
+               1)Click "Словари" on left sidebar-menu.
+               2)Click "Сотрудники"
+               3)Find user with such parameters
+               a. Worker surname - Petrenko
+               b. Worker name - Yura
+               c. Worker middle name - Anatolijovich
+               d. Woker phone - +380670000000
+               4) Go in profile of user
+               5) Edit parametrs
+               a. Worker surname - Sidorenko
+               b. Worker name - Petr
+               c. Worker middle name - Abramovich
+               d. Woker phone - +380500000000
+               6) Click button "Сохранить"
+
+               Expected Result
+               1)Click "Словари" on left sidebar-menu.
+               2)Click "Сотрудники"
+               3)Find user with such parameters
+               a. Worker surname - Sidorenko
+               b. Worker name - Petr
+               c. Worker middle name - Abramovich
+               d. Woker phone - +380500000000
+               4) Go in profile of user and check all parametrs
+               5) Parameters changed
+
+               PostConditions
+               1)Click "Словари" on left sidebar-menu.
+               2)Click "Сотрудники"
+               3)Find user with such parameters
+               a. Worker surname - Sidorenko
+               b. Worker name - Petr
+               c. Worker middle name - Abramovich
+               d. Woker phone - +380500000000
+               4) Go in profile of user
+               5) Click button "Удалить"
+
+4.
+               Title
+               Add new "Установка" by sidebar-menu
+
+               Steps
+               1)Click "Установка" on left sidebar-menu.
+               2)Click on the right top icon "+"
+               3)Fill out
+               a. Installation date - 03 "марта" 2019 15 : 00
+               b. "Аппарат" - Ванна
+               c. "Сотрудник" - Abramovich
+               3)Click "Создать"
+
+               Expected Result
+               1)Click "Установка" on left sidebar-menu.
+               3)Find user with such parameters
+               a. Installation date - 03 "марта" 2019 15 : 00
+               b. "Аппарат" - Ванна
+               c. "Сотрудник" - Abramovich
+
+               PostConditions
+                1)Click "Установка" on left sidebar-menu.
+
+                3)Find user with such parameters
+                a. Installation date - 03 "марта" 2019 15 : 00
+                b. "Аппарат" - Ванна
+                c. "Сотрудник" - Abramovich
+                4) Go in profile
+                5) Click button "Удалить"
+
+
+5.
+               Title
+               Edit profile of "Установка" by sidebar-menu
+
+               Preconditions
+               1)Click "Установка" on left sidebar-menu.
+               2)Click on the right top icon "+"
+               3)Fill out
+               a. Installation date - 03 "марта" 2019 15 : 00
+               b. "Аппарат" - Ванна
+               c. "Сотрудник" - Abramovich
+               3)Click "Создать"
+
+               Steps
+               1)Click "Установка" on left sidebar-menu.
+               2)Find profile with such parameters
+               a. Installation date - 03 "марта" 2019 15 : 00
+               b. "Аппарат" - Ванна
+               c. "Сотрудник" - Abramovich
+               3)Click profile
+               4)Edit parametres
+               a. Installation date - 03 "января" 2019 16 : 00
+               b. "Аппарат" - унитаз
+               c. "Сотрудник" - Petrenko
+
+               Expected Result
+               1)Click "Установка" on left sidebar-menu.
+               2)Find profile with such parameters
+               a. Installation date - 03 "января" 2019 16 : 00
+               b. "Аппарат" - унитаз
+               c. "Сотрудник" - Petrenko
+               3) Click profile and chack parameters
+               4) Parametres changed
+
+               PostConditions
+               1)Click "Установка" on left sidebar-menu.
+               3)Find user with such parameters
+               a. Installation date - 03 "января" 2019 16 : 00
+               b. "Аппарат" - унитаз
+               c. "Сотрудник" - Petrenko
+               4) Go in profile
+               5) Click button "Удалить"
