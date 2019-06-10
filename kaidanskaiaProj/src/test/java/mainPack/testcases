@@ -21,6 +21,25 @@ New user Jurov Petro Ivanovych created, form is closed,
 user is redirected to employees list. New created employee is shown in the end of this list
 
 
+Spares editing
+Preconditions:
+1. Open http://v3.test.itpmgroup.com/
+2. Login as student // 909090
+
+Steps to reproduce:
+
+1. Go to section "Словари" in left menu
+2. Open tab "Запчасти"
+3. Click on any spare in list eg "Пластиковое колесо шнека"
+4. Change "Тип детали" -> select new type from dropdown list
+5. Click on button "Сохранить" below the form
+
+Expected result
+Editing form with fields "Spare name" and "Тип детали" is opened,
+user can select another value from dropdown list "Тип детали",
+after confirming changes by click on "Сохранить" button user is redirected to spares list
+new spare type is shown for "Пластиковое колесо шнека"
+
 
 
 
