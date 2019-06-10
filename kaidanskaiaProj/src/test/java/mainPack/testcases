@@ -71,7 +71,17 @@ Expected result
 Employee is deleted, user is redirected to employees list,
 Jurov Petro Ivanovych is absent in workers list
 
+5TC Delete apparat
 
+1. Go to section "Словари" in left menu
+2. Open tab "Аппарат"
+3. Find "транклюкатор" in the list and click on it to open details
+4. Click on button "Удалить" below the form
+
+Expected result
+
+Apparat is deleted, user is redirected to apparats list,
+"транклюкатор" is absent in apparats list
 
 
 
