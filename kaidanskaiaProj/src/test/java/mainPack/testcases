@@ -58,6 +58,20 @@ Expected result
 New apparat created, user is redirected to apparats list, new created транклюкатор
 is shown in the ent of the list
 
+4TC Delete employee
+
+Steps to reproduce
+
+1. Go to section "Словари" in left menu
+2. Open tab "Сотрудники"
+3. Find Jurov Petro Ivanovych and click on this name
+4. Click on "Удалить" button below the form
+
+Expected result
+Employee is deleted, user is redirected to employees list,
+Jurov Petro Ivanovych is absent in workers list
+
+
 
 
 
