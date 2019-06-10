@@ -1,7 +1,9 @@
-Create new employee
 Preconditions:
 1. Open http://v3.test.itpmgroup.com/
 2. Login as student // 909090
+
+
+1TC Create new employee
 
 Steps to reproduce:
 
@@ -21,7 +23,7 @@ New user Jurov Petro Ivanovych created, form is closed,
 user is redirected to employees list. New created employee is shown in the end of this list
 
 
-Spares editing
+2TC Spares editing
 Preconditions:
 1. Open http://v3.test.itpmgroup.com/
 2. Login as student // 909090
@@ -40,6 +42,21 @@ user can select another value from dropdown list "Тип детали",
 after confirming changes by click on "Сохранить" button user is redirected to spares list
 new spare type is shown for "Пластиковое колесо шнека"
 
+3TC New apparat creation
+
+1. Go to section "Словари" in left menu
+2. Open tab "Аппарат"
+3. Click on "+" button in right top corner
+4. Fill the form eg
+
+Apparat number 5454545
+Apparat comment транклюкатор
+
+5. Click on "Создать" button below the form
+
+Expected result
+New apparat created, user is redirected to apparats list, new created транклюкатор
+is shown in the ent of the list
 
 
 
