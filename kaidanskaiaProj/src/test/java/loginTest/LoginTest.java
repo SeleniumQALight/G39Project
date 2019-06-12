@@ -32,7 +32,6 @@ public class LoginTest {
 
         Assert.assertTrue("Avatar is not present",
                 webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed());
-
         webDriver.quit();
 
 
