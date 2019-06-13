@@ -1,6 +1,9 @@
 package loginTest;
 
+import Pages.HomePage;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,15 +13,22 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class LoginTest {
-    @Test
-    public void validLogIn () {
+    WebDriver webDriver;
+
+    @Before
+    public void setUp() {
         File file = new File("./src/oldDrivers/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 
-        WebDriver webDriver = new ChromeDriver();
+        webDriver = new ChromeDriver();
 
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void validLogIn() {
+
 
         webDriver.get("http://v3.test.itpmgroup.com");
 // .\\*[@name='_username']
@@ -29,9 +39,17 @@ public class LoginTest {
         webDriver.findElement(By.id("password")).sendKeys("909090");
         webDriver.findElement(By.tagName("button")).click();
 
+        HomePage homePage = new HomePage(webDriver);
         Assert.assertTrue("Avatar is not present",
-                webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed());
+//                webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed()
+                homePage.isAvatarPresent()
+        );
 
+        webDriver.quit();
+    }
+
+    @After
+    public void tearDown() {
         webDriver.quit();
     }
 }
