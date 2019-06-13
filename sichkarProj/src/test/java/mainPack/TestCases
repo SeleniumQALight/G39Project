@@ -18,6 +18,7 @@ Steps:
 3. Press the "+ (Add)" button
 4. Fill in the fields Worker surname, Worker name, Worker middle name, Worker phone with values Test 1/2/3/4
 5. Click the button "Создать"
+6. Check whether the created employee is in the "Employees" list
 
 Expected results: Successful employee creation and adding it to the grid.
 
@@ -28,11 +29,12 @@ Case 3. Adding New spare
 Pre-Conditions: Successful login from Case 1
 Steps:
 1. Click the menu item "Словари"
-2. Click the menu item "Запчати"
+2. Click the menu item "Запчаcти"
 3. Press the "+ (Add)" button
 4. Enter TestName in the field "Spare name"
 5. Click in the dropdown "Тип Детали" and select "Механика"
 6. Click the button "Создать"
+7. Check whether the created employee is in the “Spare” list
 
 Expected results: Successful spare creation and adding it to the grid.
 
@@ -56,6 +58,7 @@ Steps:
 2. Click the menu item "Словари"
 3. In the "Deal date", "Тип сделки" "Покупатель" "Поставищик" field, select random data from the dropouts
 4. Click the button "Создать"
+5. Check whether the created employee is in the "Deal" list
 
 Expected results: Successful Deal creation and adding it to the grid.
 
