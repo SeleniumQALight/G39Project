@@ -1,0 +1,17 @@
+Main Page - Left menu
+.//*[@id='dictionary'] Словари
+
+.//*[@id='workers'] Сотрудники
+
+
+
+/dictionary/workers page
+
+.//a[@class='btn btn-info btn-sm'] add button
+
+or .//a[@href='http://v3.test.itpmgroup.com/dictionary/workers/edit']
+
+Edit user
+
+.//input[@id='workers_workerSurname']  Worker surname
+
