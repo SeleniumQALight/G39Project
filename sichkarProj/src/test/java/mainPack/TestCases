@@ -29,7 +29,7 @@ Case 3. Adding New spare
 Pre-Conditions: Successful login from Case 1
 Steps:
 1. Click the menu item "Словари"
-2. Click the menu item "Запчаcти"
+2. Click the sub-item "Запчаcти"
 3. Press the "+ (Add)" button
 4. Enter TestName in the field "Spare name"
 5. Click in the dropdown "Тип Детали" and select "Механика"
@@ -55,7 +55,7 @@ Case 5. Add New Deal
 Pre-Conditions: Successful login from Case 1
 Steps:
 1. Click the menu item "Сделки"
-2. Click the menu item "Словари"
+2. Press the "+ (Add)" button
 3. In the "Deal date", "Тип сделки" "Покупатель" "Поставищик" field, select random data from the dropouts
 4. Click the button "Создать"
 5. Check whether the created employee is in the "Deal" list

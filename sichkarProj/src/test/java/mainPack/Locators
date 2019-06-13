@@ -1,0 +1,52 @@
+#Login
+Email=name("_username")
+Password = id("password")
+Submit = tagName("button")
+
+----------------------------------------------
+#New Employee
+item "Словари"= .//*[@id="dictionary"]
+sub-item "Сотрудники" = .//*[@id="workers"]
+(Add) button = .//*[@class="btn btn-info btn-sm"]
+Worker surname = id("workers_workerSurname")
+Worker name = id("workers_workerName")
+Worker middle name = id("workers_workerMiddleName")
+Worker phone = id("workers_workerPhone")
+Submit = tagName("button")
+
+----------------------------------------------
+#New spare
+item "Словари"= .//*[@id="dictionary"]
+sub-item "Запчаcти" = .//*[@id="spares"]
+(Add) button = .//*[@class="btn btn-info btn-sm"]
+"Spare name" = .//*[@id="spares_spareName"]
+dropdown "Тип Детали" = .//*[@name="spares[spareType]"]
+select "Механика" = .//*[@name="spares[spareType]" ]/option[2]
+Submit = tagName("button")
+
+--------------------------------------------------
+#user profile
+button with user icon = .//a[@class="dropdown-toggle"]
+button "Профиль" = .//div[@class="pull-left"]/a
+
+--------------------------------------------------
+#New Deal
+menu item "Сделки" = .//*[@id="deal"]
+(Add) button = .//*[@class="btn btn-info btn-sm"]
+"Deal date.day" = .//*[@id="deal_dealDate_date_day"]
+"Deal date.day.select" = .//*[@id="deal_dealDate_date_day"]/option[1]
+"Deal date.month" = .//*[@id="deal_dealDate_date_month"]
+"Deal date.month.select" = .//*[@id="deal_dealDate_date_month"]/option[1]
+"Deal date.year" = .//*[@id="deal_dealDate_date_year"]
+"Deal date.year.select" = .//*[@id="deal_dealDate_date_year"]/option[2]
+"Deal date.hour" = .//*[@id="deal_dealDate_time_hour"]
+"Deal date.hour.select" = .//*[@id="deal_dealDate_time_hour"]/option[3]
+"Deal date.minute" = .//*[@id="deal_dealDate_time_minute"]
+"Deal date.minute.select" = .//*[@id="deal_dealDate_time_minute"]/option[3]
+"field "Тип сделки" = .//*[@id="deal_dealType"]
+"field "Тип сделки.select" = .//*[text()="0bmen"]
+"field Покупатель" = .//*[@id="deal_customer"]
+"field Покупатель.select" = .//*[text()="Add Provider"]
+"field Поставищик" = .//*[@id="deal_provider"]
+"field Поставищик.select" = "field Поставищик"
+Submit = tagName("button")
