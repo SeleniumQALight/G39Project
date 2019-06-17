@@ -44,6 +44,24 @@ public class LoginTest {
         );
 
             }
+
+    @Test
+
+    public void NotValidLogin(){
+        webDriver.get("http://v3.test.itpmgroup.com");
+        webDriver.findElement(By.name("_username")).clear();
+        webDriver.findElement(By.name("_username")).sendKeys("Student");
+        webDriver.findElement(By.id("password")).clear();
+        webDriver.findElement(By.id("password")).sendKeys("12345");
+        webDriver.findElement(By.tagName("button")).click();
+        HomePage homePage = new HomePage(webDriver);
+
+        Assert.assertTrue("Login form is not visible" ,
+       // assert webDriver.getPageSource().contains("Авторизация");
+        homePage.isNotValidLogin());
+
+    }
+
     @After
     public void tearDown() {
         webDriver.quit();
