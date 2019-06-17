@@ -1,52 +1,52 @@
 #Login
-Email=name("_username")
-Password = id("password")
-Submit = tagName("button")
+Login.Email.input=name("_username")
+Login.Password.input = id("password")
+Login.Submit.button = tagName("button")
 
 ----------------------------------------------
 #New Employee
-item "Словари"= .//*[@id="dictionary"]
-sub-item "Сотрудники" = .//*[@id="workers"]
-(Add) button = .//*[@class="btn btn-info btn-sm"]
-Worker surname = id("workers_workerSurname")
-Worker name = id("workers_workerName")
-Worker middle name = id("workers_workerMiddleName")
-Worker phone = id("workers_workerPhone")
-Submit = tagName("button")
+NewEmployee.item"Словари" = xpath(.//*[@id="dictionary"])
+NewEmployee.sub-item"Сотрудники" = xpath(.//*[@id="workers"]/a)
+NewEmployee.Add.button = xpath(.//*[@class="btn btn-info btn-sm"])
+NewEmployee.Workersurname.input = id("workers_workerSurname")
+NewEmployee.Workername.input = id("workers_workerName")
+NewEmployee.Workermiddlename.input = id("workers_workerMiddleName")
+NewEmployee.Workerphone.input = id("workers_workerPhone")
+NewEmployee.Submit.button = tagName("button")
 
 ----------------------------------------------
 #New spare
-item "Словари"= .//*[@id="dictionary"]
-sub-item "Запчаcти" = .//*[@id="spares"]
-(Add) button = .//*[@class="btn btn-info btn-sm"]
-"Spare name" = .//*[@id="spares_spareName"]
-dropdown "Тип Детали" = .//*[@name="spares[spareType]"]
-select "Механика" = .//*[@name="spares[spareType]" ]/option[2]
-Submit = tagName("button")
+Newspare.item."Словари"= .//*[@id="dictionary"]
+Newspare.sub-item"Запчаcти" = xpath(.//*[@id="spares"]/a)
+Newspare.Add.button = xpath(.//*[@class="btn btn-info btn-sm"])
+Newspare.Spare name.input = xpath(.//*[@id="spares_spareName"])
+Newspare.dropdownТипДетали = xpath(.//*[@id="spares_spareType"])
+Newspare.select."Механика" = xpath(.//*[text()="Механикa"])
+Newspare.Submit.button = tagName("button")
 
 --------------------------------------------------
-#user profile
-button with user icon = .//a[@class="dropdown-toggle"]
-button "Профиль" = .//div[@class="pull-left"]/a
+#User profile
+UserProfile.ButtonWithUserIcon = xpath(.//a[@class="dropdown-toggle"])
+UserProfile.Button"Профиль" = xpath(.//a[@class="btn btn-default btn-flat"])
 
 --------------------------------------------------
 #New Deal
-menu item "Сделки" = .//*[@id="deal"]
-(Add) button = .//*[@class="btn btn-info btn-sm"]
-"Deal date.day" = .//*[@id="deal_dealDate_date_day"]
-"Deal date.day.select" = .//*[@id="deal_dealDate_date_day"]/option[1]
-"Deal date.month" = .//*[@id="deal_dealDate_date_month"]
-"Deal date.month.select" = .//*[@id="deal_dealDate_date_month"]/option[1]
-"Deal date.year" = .//*[@id="deal_dealDate_date_year"]
-"Deal date.year.select" = .//*[@id="deal_dealDate_date_year"]/option[2]
-"Deal date.hour" = .//*[@id="deal_dealDate_time_hour"]
-"Deal date.hour.select" = .//*[@id="deal_dealDate_time_hour"]/option[3]
-"Deal date.minute" = .//*[@id="deal_dealDate_time_minute"]
-"Deal date.minute.select" = .//*[@id="deal_dealDate_time_minute"]/option[3]
-"field "Тип сделки" = .//*[@id="deal_dealType"]
-"field "Тип сделки.select" = .//*[text()="0bmen"]
-"field Покупатель" = .//*[@id="deal_customer"]
-"field Покупатель.select" = .//*[text()="Add Provider"]
-"field Поставищик" = .//*[@id="deal_provider"]
-"field Поставищик.select" = "field Поставищик"
-Submit = tagName("button")
+NewDeal.MenuItem."Сделки" = xpath(.//*[@id="deal"]/a)
+NewDeal.Add.Button = xpath(.//*[@class="btn btn-info btn-sm"])
+NewDeal.DealDateDay.dropdown = xpath(.//*[@id="deal_dealDate_date_day"])
+NewDeal.DealDateDay.select" = xpath(.//*[@id="deal_dealDate_date_day"]/option[1])
+NewDeal.DealDateMonth.dropdown = xpath(.//*[@id="deal_dealDate_date_month"])
+NewDeal.DealDateMonth.select" = xpath(.//*[@id="deal_dealDate_date_month"]/option[1])
+NewDeal.DealDateYear.dropdown = xpath(.//*[@id="deal_dealDate_date_year"])
+NewDeal.DealDateYear.select" = xpath(.//*[@id="deal_dealDate_date_year"]/option[2])
+NewDeal.DealDate.Hour.dropdown = xpath(.//*[@id="deal_dealDate_time_hour"])
+NewDeal.DealDate.Hour.select" = xpath(.//*[@id="deal_dealDate_time_hour"]/option[3])
+NewDeal.DealDateMinute.dropdown = xpath(.//*[@id="deal_dealDate_time_minute"])
+NewDeal.DealDateMinute.select" = xpath(.//*[@id="deal_dealDate_time_minute"]/option[3])
+NewDeal.Тип сделки.dropdown = xpath(.//*[@id="deal_dealType"])
+NewDeal.Тип сделки.select" = xpath(.//*[@id="deal_dealType"]/option[4])
+NewDeal.Покупатель.dropdown = xpath(.//*[@id="deal_customer"])
+NewDeal.Покупатель.select" = xpath(.//*[@id="deal_customer"]/option[9])
+NewDeal.Поставищик.dropdown = xpath(.//*[@id="deal_provider"])
+NewDeal.Поставищик.select" = xpath(.//*[@id="deal_provider"]/option[4])
+NewDeal.Submit.Button = tagName("button")
