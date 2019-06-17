@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HomePage extends ParentPage{
+public class HomePage extends ParentPage {
 
 
     public HomePage(WebDriver webDriver) {
@@ -13,10 +13,19 @@ public class HomePage extends ParentPage{
     public boolean isAvatarPresent() {
         try {
             return webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed();
-        }  catch (Exception e) {
+        } catch (Exception e) {
 
             return false;
         }
 
     }
-}
+
+    public boolean isNotValidLogin() {
+        try {
+            return webDriver.getPageSource().contains("Авторизация");
+        } catch (Exception e) {
+            return false;
+        }
+
+
+    }}
