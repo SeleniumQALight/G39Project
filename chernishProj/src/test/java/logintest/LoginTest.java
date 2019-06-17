@@ -47,6 +47,25 @@ public class LoginTest {
 
     }
 
+    @Test
+    public void invalidLogin(){
+
+
+        webDriver.get("http://v3.test.itpmgroup.com");
+
+        webDriver.findElement(By.name("_username")).clear();
+        webDriver.findElement(By.name("_username")).sendKeys("Student");
+
+        webDriver.findElement(By.id("password")).clear();
+        webDriver.findElement(By.id("password")).sendKeys("9095090");
+
+        webDriver.findElement(By.tagName("button")).click();
+        HomePage homePage = new HomePage(webDriver);
+
+        Assert.assertFalse("Your password is invalid", homePage.isAvatarPresent());
+
+    }
+
     @After
     public void tearDown(){
 

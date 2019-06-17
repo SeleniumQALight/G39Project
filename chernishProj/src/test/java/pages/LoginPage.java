@@ -18,4 +18,6 @@ public class LoginPage extends ParentPage{
             Assert.fail("Unexpected problem. Cann`t open page");
         }
     }
+
+
 }
