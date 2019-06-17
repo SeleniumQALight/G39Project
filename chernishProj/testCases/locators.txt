@@ -1,0 +1,57 @@
+//Main page
+Main.Dictionary = xpath(“.//*[@class=‘fa fa-book’]”)
+Main.Dictionary.Apparatus = xpath(“.//li[@id=‘apparat’]”)
+Main.Dictionary.DealType = xpath(“.//li[@id=‘deal_type’]")
+Main.Deals = xpath(“.//i[@class='fa fa-money’]”)
+
+
+//Apparatus
+Apparatus.Button.AddNew = xpath(“.//i[@class='fa fa-plus’]”)
+Apparatus.Field.AppNumber = xpath(“.//input[@id=‘apparat_apparatNumber']”)
+Apparatus.Field.AppComment = xpath(“.//input[@id=‘apparat_apparatComment']”)
+Apparatus.Button.Create = xpath(“.//button[@name=‘add']”)
+Apparatus.Button.Delete = xpath(“.//button[@name=‘delete']”)
+Apparatus.Button.Save = xpath(“.//button[@name=‘save']”)
+
+//Type of the deals
+DealType.Bytton.Add = xpath(“.//a[@class='btn btn-info btn-sm']”)
+DealType.Bytton.Create = xpath(“.//button[@name=‘add']”)
+DealType.Field.Add = xpath(“.//input[@id='deal_type_dealTypeName']”)
+
+
+//Deals
+Deals.Header = xpath(“.//section[@class=‘content-header']”)
+Deals.Button.Add = xpath(“.//a[@class='btn btn-info btn-sm’]”)
+Deals.Button.save = xpath(“.//button[@name=‘add’]”)
+
+Delas.Field.DealDay = xpath(“.//select[@id=‘deal_dealDate_date_day’]”)
+//choose 3rd day from the list
+Delas.Field.DealDay = xpath(“.//select[@id='deal_dealDate_date_day']/option[@value='3']”)
+
+Delas.Field.DealMonth = xpath(“.//select[@id=‘deal_dealDate_date_month']”)
+//choose 3rd month from the list
+Delas.Field.DealMonth = xpath(“.//select[@id='deal_dealDate_date_month']/option[@value='3']”)
+
+Delas.Field.DealYear = xpath(“.//select[@id=‘deal_dealDate_date_year']”)
+//choose 2019 year from the list
+Delas.Field.DealYear = xpath(“.//select[@id='deal_dealDate_date_year']/option[@value='2019']”)
+
+Delas.Field.DealHour = xpath(“.//select[@id=‘deal_dealDate_time_hour']”)
+//choose 3 hour from the list
+Delas.Field.DealHour = xpath(“.//select[@id='deal_dealDate_time_hour']/option[@value='3']”)
+
+Delas.Field.DealMinute = xpath(“.//select[@id=‘deal_dealDate_time_minute’]”)
+//choose 3 minute from the list
+Delas.Field.DealMinute = xpath(“.//select[@id='deal_dealDate_time_minute']/option[@value='3']”)
+
+Deals.Field.DealType = xpath(“.//select[@id=‘deal_dealType']”)
+//choose the deal with type “YuliiaTest”
+Deals.Field.DealType = xpath(“.//select[@id=‘deal_dealType']/option[text()='YuliiaTest']”)
+
+Deals.Field.Buyer = xpath(“.//select[@id='deal_customer']”)
+//choose the deal with buyer “test”
+Deals.Field.Buyer = xpath(“.//select[@id=‘deal_customer']/option[text()='test']”)
+
+Deals.Field.Producer = xpath(“.//select[@id=‘deal_provider’]”)
+//choose the deal with provider “TestV2”
+Deals.Field.Producer = xpath(“.//select[@id='deal_provider']/option[text()='TestV2']”)
