@@ -49,8 +49,8 @@ public class LoginTest {
         webDriver.findElement(By.id("password")).sendKeys("9090");
         webDriver.findElement(By.tagName("button")).click();
         HomePage homePage = new HomePage(webDriver);
-        Assert.assertFalse(homePage.iaAvatarPresent());
-        System.out.println("Account not found");
+        Assert.assertFalse("Account not found",homePage.iaAvatarPresent());
+//        System.out.println("Account not found");
     }
 
     @After
