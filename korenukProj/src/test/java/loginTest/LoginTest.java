@@ -46,6 +46,19 @@ public class LoginTest {
         homePage.isAvatarPresent());
 
     }
+    @Test
+    public void invalidLogin(){
+        webDriver.get("http://v3.test.itpmgroup.com");
+        webDriver.findElement(By.name("_username")).clear();
+        webDriver.findElement(By.name("_username")).sendKeys("Students");
+        webDriver.findElement(By.id("password")).sendKeys("909090");
+        webDriver.findElement(By.tagName("button")).click();
+        HomePage homePage= new HomePage(webDriver);
+        Assert.assertTrue("Authorization window is not displayed ",
+
+                homePage.avtorizationPage());
+
+    }
 
     @After
     public void tearDown(){
