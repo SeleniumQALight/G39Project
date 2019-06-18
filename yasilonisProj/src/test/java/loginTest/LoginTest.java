@@ -52,7 +52,7 @@ public class LoginTest {
     public void notValidLogin(){
         webDriver.get("http://v3.test.itpmgroup.com");
         webDriver.findElement(By.name("_username")).clear();
-        webDriver.findElement(By.name("_username")).sendKeys("Student");
+        webDriver.findElement(By.name("_username")).sendKeys("tudent");
 
         webDriver.findElement(By.id("password")).clear();
         webDriver.findElement(By.id("password")).sendKeys("909090");
