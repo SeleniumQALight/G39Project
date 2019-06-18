@@ -68,7 +68,7 @@ public class LoginTest {
         LoginPage loginPage = new LoginPage(webDriver);
 
         Assert.assertTrue("Login form is not shown",
-                loginPage.isLoginFormPresent());
+                loginPage.isPasswordFieldPresent());
 
 
     }
