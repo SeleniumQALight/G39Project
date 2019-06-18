@@ -5,7 +5,6 @@ button "Create" in the new anything card - .//button[@name="add"]
 button "Add new item" - .//a[@class="btn btn-info btn-sm"]
 
 new Apparat
-
 "Apparat Number" field in the new "Apparat" - .//input[@id="apparat_apparatNumber"]
 "Apparat Comment" field in the new "Apparat" - .//input[@id="apparat_apparatComment"]
 find added elements in the "Apparat" list - .//td=[contains(text(),'%')]
