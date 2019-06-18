@@ -12,9 +12,9 @@ public class LoginPage extends ParentPage{
     public void openPage(){
         try{
             webDriver.get("http://v3.test.itpmgroup.com/");
-            logger.info("Login page is opend");
+            logger.info("Login page is opened");
         } catch (Exception e){
-            logger.error("Can't open Loginpage");
+            logger.error("Can't open LoginPage");
             Assert.fail("Can't open LoginPage");
         }
     }
