@@ -20,7 +20,7 @@ public class HomePage extends ParentPage {
 
     }
 
-    public boolean isNotValidLogin() {
+    public boolean isTextAutorisationPage() {
         try {
             return webDriver.getPageSource().contains("Авторизация");
         } catch (Exception e) {
