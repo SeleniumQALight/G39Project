@@ -12,7 +12,7 @@ ER: Left side menu is hidden
 
 TC3
 Open /dictionary/workers#
-Clck Plus button on right side
+Click Plus button on right side
 On opened window input some symbols to first text field (Work surname)
 Click Create button (Sozdat)
 ER: message appeared near second text field:  "Please fill out on this field"
@@ -24,5 +24,5 @@ ER: item is opened for editing, no any errors
 
 TC5
 Open /dictionary/service
-Clck Plus button on right side
+Click Plus button on right side
 ER: opened new window for creating item, no any errors
