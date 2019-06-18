@@ -62,7 +62,7 @@ public class LoginTest {
         webDriver.findElement(By.tagName("button")).click();
         HomePage homePage = new HomePage(webDriver);
 
-        Assert.assertFalse("Your password is invalid", homePage.isAvatarPresent());
+        Assert.assertFalse("Avatar is visible", homePage.isAvatarPresent());
 
     }
 

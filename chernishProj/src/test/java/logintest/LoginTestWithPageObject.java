@@ -8,6 +8,11 @@ public class LoginTestWithPageObject extends ParentTest {
     public void validLogin(){
 
         loginPage.openPage();
+        loginPage.enterTextInToInputLogin("Student");
+        loginPage.enterTextInToInputPass("909090");
+        loginPage.clickOnButtonVhod();
+
+        checkExpectedResult("Avatar is not present", true, homePage.isAvatarPresent());
     }
 
 
