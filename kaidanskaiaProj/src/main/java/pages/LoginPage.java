@@ -20,7 +20,7 @@ public class LoginPage extends ParentPage{
         }
     }
 
-    public boolean isLoginFormPresent(){
+    public boolean isPasswordFieldPresent(){
         try {
             return webDriver.findElement(By.id("password")).isDisplayed();
         } catch (Exception e){
