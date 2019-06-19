@@ -1,6 +1,7 @@
 package parentTest;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +12,7 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class ParentTest {
-    WebDriver webDriver;
+    protected WebDriver webDriver;
     protected LoginPage loginPage;
     protected HomePage homePage;
 
@@ -34,5 +35,14 @@ public class ParentTest {
     public void  after(){
         webDriver.quit();
     }
+
+    public void checkExpectedResult(String message, boolean expectedResult, boolean actualResult){
+        Assert.assertEquals(message, expectedResult, actualResult);
+        //webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed()
+    }
+
+//    public void checkExpectedResult (String message, boolean actualResult){
+////        checkExpectedResult();
+////    }
 
 }

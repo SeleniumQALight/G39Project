@@ -25,10 +25,9 @@ public class loginTest {
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
+/*
     @Test
     public void validLoginIn (){
-        //path to ChromeDriver
-
         webDriver.get("http://v3.test.itpmgroup.com/");
 
         webDriver.findElement(By.name("_username")).clear();
@@ -42,8 +41,8 @@ public class loginTest {
         Assert.assertTrue("Avatar isn't present", homePage.isAvatarPresent()
                 //webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed()
         );
-
     }
+*/
     @After
     public void  after(){
         webDriver.quit();
