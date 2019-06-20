@@ -70,4 +70,12 @@ public class LoginPage extends ParentPage {
             Assert.fail("Can not work with element");
         }
     }
+
+    public void loginWithCred(String login,
+                              String pass) {
+        openPage();
+        enterTextInToInputLogin(login);
+        enterTextInToInputPassword(pass);
+        clickOnButtonVhod();
+    }
 }
