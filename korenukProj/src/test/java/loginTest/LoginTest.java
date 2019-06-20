@@ -54,9 +54,7 @@ public class LoginTest {
         webDriver.findElement(By.id("password")).sendKeys("909090");
         webDriver.findElement(By.tagName("button")).click();
         HomePage homePage= new HomePage(webDriver);
-        Assert.assertTrue("Authorization window is not displayed ",
-
-                homePage.avtorizationPage());
+        Assert.assertTrue("Authorization window is not displayed ", homePage.authorizationPage());
 
     }
 
