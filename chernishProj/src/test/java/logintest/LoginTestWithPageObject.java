@@ -16,4 +16,14 @@ public class LoginTestWithPageObject extends ParentTest {
     }
 
 
+
+    @Test
+    public void unvalidLogin(){
+        loginPage.loginWithCred("Student", "906090");
+
+        checkExpectedResult("Avatar should not be present", false, homePage.isAvatarPresent());
+
+    }
+
+
 }

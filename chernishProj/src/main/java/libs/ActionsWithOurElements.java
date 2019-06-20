@@ -13,7 +13,7 @@ public class ActionsWithOurElements {
         this.webDriver = webDriver;
     }
 
-    public void enterTextIntoImput(WebElement element, String text){
+    public void enterTextIntoInput(WebElement element, String text){
         try{
 
             element.clear();

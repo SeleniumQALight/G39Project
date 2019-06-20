@@ -42,7 +42,7 @@ public class LoginPage extends ParentPage{
             Assert.fail("Can not work with element");
         }*/
 
-        actionWithOurElements.enterTextIntoImput(inputLogin, login);
+        actionWithOurElements.enterTextIntoInput(inputLogin, login);
     }
 
     public void enterTextInToInputPass(String password) {
@@ -56,7 +56,7 @@ public class LoginPage extends ParentPage{
             logger.error("Cann`t work with element");
             Assert.fail("Cann`t work with element");
         }*/
-        actionWithOurElements.enterTextIntoImput(inputPass, password);
+        actionWithOurElements.enterTextIntoInput(inputPass, password);
 
     }
 
@@ -70,5 +70,13 @@ public class LoginPage extends ParentPage{
             logger.error("Cann`t work with element");
             Assert.fail("Cann`t work with element");
         }
+    }
+
+    public void loginWithCred(String login, String pass) {
+        openPage();
+        enterTextInToInputLogin(login);
+        enterTextInToInputPass(pass);
+        clickOnButtonVhod();
+
     }
 }
