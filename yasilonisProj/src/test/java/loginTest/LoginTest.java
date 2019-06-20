@@ -33,7 +33,7 @@ public class LoginTest {
         webDriver.get("http://v3.test.itpmgroup.com");
 // .\\*[@name='_username']
         webDriver.findElement(By.name("_username")).clear();
-        webDriver.findElement(By.name("_username")).sendKeys("Student");
+        webDriver.findElement(By.name("_username")).sendKeys("tudent");
 
         webDriver.findElement(By.id("password")).clear();
         webDriver.findElement(By.id("password")).sendKeys("909090");
@@ -45,6 +45,23 @@ public class LoginTest {
                 homePage.isAvatarPresent()
         );
 
+        webDriver.quit();
+    }
+
+    @Test
+    public void notValidLogin(){
+        webDriver.get("http://v3.test.itpmgroup.com");
+        webDriver.findElement(By.name("_username")).clear();
+        webDriver.findElement(By.name("_username")).sendKeys("tudent");
+
+        webDriver.findElement(By.id("password")).clear();
+        webDriver.findElement(By.id("password")).sendKeys("909090");
+        webDriver.findElement(By.tagName("button")).click();
+
+        HomePage homePage = new HomePage(webDriver);
+        Assert.assertFalse("Avatar is present",
+        homePage.isAvatarPresent()
+        );
         webDriver.quit();
     }
 

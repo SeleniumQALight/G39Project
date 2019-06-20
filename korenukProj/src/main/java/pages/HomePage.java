@@ -19,5 +19,20 @@ public class HomePage extends ParentPage {
             return false;
         }
 
+
     }
-}
+
+    public boolean authorizationPage(){
+        try {
+            return webDriver.findElement(By.xpath(".//div[@class='login-box-body']")).isDisplayed();
+        }
+        catch (Exception e) {
+
+            return false;
+
+
+            }
+        }
+    }
+
+
