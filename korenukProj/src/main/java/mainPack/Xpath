@@ -1,0 +1,36 @@
+# Dictionary
+
+1.Dictionary.link=xpath//a[@href="#"]
+2.Dictionary.Apparat.button=xpath//li[@id="apparat"]/a
+3.Dictionary.Apparat.Add.button=xpath ./a[@href='http://v3.test.itpmgroup.com/dictionary/apparat/edit']
+4.Dictionary.Apparat.apparatNumber.input=xpath//*[@id="apparat_apparatNumber"]
+5.Dictionary.Apparat.apparatComment.input=xpath//*[@id="apparat_apparatComment"]
+6.Dictionary.Apparat.Create.button=xpath//button[@type ='submit']
+
+
+#Dictionary
+
+1.Dictionary.Deal=xpath//*[@id='deal']/a
+2.Dictionary.Deal.Deal_provider.button=xpath//*[@id='deal_provider']
+3.Dictionary.Deal.Type of deal.input=xpath//*[@id='deal_provider']/option [@value='62']
+4.Dictionary.Deal_provider.Create.button=xpath//div[@class='box-footer']/button
+
+#Dictionary
+1.Dictionary.Spare parts.button=xpath//a[@id='spares']/a
+2.Dictionary.Spare parts.Edit.button=xpath//a[@href='http://v3.test.itpmgroup.com/dictionary/spare_type/edit']
+3.Dictionary.Spare name.input=xpath//*[@id='spares_spareName']
+4.Dictionary.SpareType.input=xpath//*[@id="spares_spareType"]
+//*[@id='spares_spareType']/option[2]
+
+
+#Dictionary
+
+1.Dictionary.Parties to transactions.button=xpath//*[@id="prov_cus"]/a
+2.Dictionary.Device_list.input=xpath//*[@id="device_list"]/tbody/tr[33]
+3.Dictionary.Delete.button=xpath//button[@name='delete']
+
+
+
+#Main Page
+1.Main Page.Dropdown User Menu=xpath//li[@class='dropdown user user-menu open']
+2..Main Page.Dropdown User Menu.logout.button=xpath//a[@href='/logout']

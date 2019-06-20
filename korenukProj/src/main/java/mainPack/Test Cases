@@ -1,0 +1,59 @@
+Test Case: 1
+Steps:
+1) Go to the site http://v3.test.itpmgroup.com/dictionary/service
+2) Open the Dictionary
+3) Add the new "Apparat"
+4) Input "3456" in the "Apparat number" field
+5) Input "test45" in the "Apparat comment" field
+6) Сlick the button Create
+
+Expected result: The new apparat is created on the "Apparat" item menu after input valid data in the "Apparat number" field.
+
+Test Case: 2
+Summery: The "404" page is opened on the "": dictionary after creating the new " " " in the "Deal type name" field
+
+Steps:
+1) Go to the site
+2) Open to the "Deals" dictionary
+3) Click on the "Plus" button
+4) Choose "Customer Name 2" in the "Provider" field
+5) Сlick the button Create
+6) Please take attentions on the page
+
+Expected result: The "404" page isn't opened on the "Deals" dictionary after creating the new "Deal"
+
+Test Case 3
+Summery: The new "Spare part" is created on the "Spare parts" dictionary after adding an invalid  number of symbols in the "Spare name" field
+
+Steps:
+1) Go to the site http://v3.test.itpmgroup.com/dictionary/service
+2) Open to the "Spare parts" dictionary
+3) Click on the "Plus" button
+4) Input "!!!!" in the "Spare name" field
+5) Choose "Механика" in the"Type of item" field
+5) Please  take attention about any notifications
+
+Expected result: The new "Spare part" isn't created on the "Spare part" dictionary after adding an invalid number of symbols in the "Spare name" field
+
+
+Test Case 4
+Steps:
+1) Go to the site http://v3.test.itpmgroup.com/dictionary/service
+2) Open to the "Parties to transactions" dictionary                               (Стороны сделок)
+3) Choose "test111" in the"Counterparties"
+4) Click the "Delete" button
+5) Please  take attention on the page
+
+Expected result: The Counterpartie is deleted on the "Parties to transactions" dictionary after click the "Delete" button
+
+Test Case 5
+Steps:
+1) Go to the site http://v3.test.itpmgroup.com/dictionary/service
+2) Click the "Profile"
+3) Click the "Log out" button
+5) Please  take attention on the page
+
+Expected result: The authorization page is open after click the "Log out" button.
+
+
+
