@@ -1,7 +1,6 @@
 package pages;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -43,7 +42,7 @@ public class LoginPage extends ParentPage{
             Assert.fail("Can not work with element");
         }*/
 
-        actionWithOurEleemnts.enterTextIntoImput(inputLogin, login);
+        actionWithOurElements.enterTextIntoImput(inputLogin, login);
     }
 
     public void enterTextInToInputPass(String password) {
@@ -57,7 +56,7 @@ public class LoginPage extends ParentPage{
             logger.error("Cann`t work with element");
             Assert.fail("Cann`t work with element");
         }*/
-        actionWithOurEleemnts.enterTextIntoImput(inputPass, password);
+        actionWithOurElements.enterTextIntoImput(inputPass, password);
 
     }
 
