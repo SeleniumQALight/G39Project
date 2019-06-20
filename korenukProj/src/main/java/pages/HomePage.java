@@ -22,7 +22,7 @@ public class HomePage extends ParentPage {
 
     }
 
-    public boolean avtorizationPage(){
+    public boolean authorizationPage(){
         try {
             return webDriver.findElement(By.xpath(".//div[@class='login-box-body']")).isDisplayed();
         }
