@@ -14,7 +14,7 @@ public class LoginPage extends ParentPage {
 
     @FindBy(name = "_username")
     private WebElement inputLogin;
-    @FindBy(id = "passord")
+    @FindBy(id = "password")
     private WebElement inputPass;
     @FindBy(tagName = "button")
     private WebElement buttonVhod;
@@ -65,5 +65,12 @@ public class LoginPage extends ParentPage {
             logger.error("Can not work with element");
             Assert.fail("Can not work with element");
         }
+    }
+
+    public void loginWithCred(String login, String pass) {
+        openPage();
+        enterTextInToInputLogin(login);
+        enterTextInToInputPassword(pass);
+        clickOnButtonVhod();
     }
 }
