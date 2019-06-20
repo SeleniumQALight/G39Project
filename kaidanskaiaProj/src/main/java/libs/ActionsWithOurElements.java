@@ -13,16 +13,26 @@ public class ActionsWithOurElements {
         this.webDriver = webDriver;
     }
 
-    public void enterTextIntoInput(WebElement element, String text){
-        try{
+    public void enterTextIntoInput(WebElement element, String text) {
+        try {
             element.clear();
             element.sendKeys(text);
             logger.info(text + " was entered into input");
 
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("Can not work with element");
             Assert.fail("Can not work with  element");
         }
 
+    }
+
+    public void clickOnElement(WebElement webElement) {
+        try {
+            webElement.click();
+            logger.info("Element was clicked");
+        } catch (Exception e) {
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with  element");
+        }
     }
 }
