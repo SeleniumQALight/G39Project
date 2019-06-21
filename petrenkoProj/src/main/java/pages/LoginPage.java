@@ -59,7 +59,7 @@ public class LoginPage extends ParentPage{
 //            Assert.fail("Can not wthis element");
 //
 //        }
-        actionsWithOurElements.enterTextInput(inputLogin, pass);
+        actionsWithOurElements.enterTextInput(inputPass, pass);
     }
 
 
@@ -74,5 +74,12 @@ public class LoginPage extends ParentPage{
             Assert.fail("Can not wthis element");
 
         }
+    }
+
+    public void loginWithCred(String login, String pass) {
+        openPage();
+        enterTextInToInputLogin(login);
+        enterTextInToInputPass(pass);
+        clickOnButtonVhod();
     }
 }
