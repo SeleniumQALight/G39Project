@@ -25,4 +25,16 @@ public class ActionsWithOutElements {
     }
 
 
+    public void clickOnElement(WebElement webElement) {
+        try {
+            webElement.click();
+            logger.info("Element was clicked");
+
+        } catch (Exception e) {
+            logger.error("Can't work with element");
+            Assert.fail("Can't work with element");
+        }
+    }
+
+
 }
