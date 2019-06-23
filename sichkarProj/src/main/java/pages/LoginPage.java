@@ -78,4 +78,8 @@ public class LoginPage extends ParentPage {
         enterTextInToInputPassword(pass);
         clickOnButtonVhod();
     }
+
+    public void validLogin() {
+        loginWithCred("Student", "909090");
+    }
 }
