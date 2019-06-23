@@ -8,14 +8,14 @@ public class SparesPage extends ParentPage {
 
     @FindBy(xpath = "//*[@class='fa fa-plus']")
     private WebElement buttonAdd;
+
     public SparesPage(WebDriver webDriver) {
         super(webDriver);
     }
 
     public void clickOnButtonAdd() {
-            actionsWithOutElements.clickOnElement(buttonAdd);
-
-        }
+        actionsWithOutElements.clickOnElement(buttonAdd);
+    }
 
 
 }
