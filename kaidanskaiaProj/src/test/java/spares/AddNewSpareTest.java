@@ -12,10 +12,10 @@ public class AddNewSpareTest extends ParentTest {
         homePage.clickOnDictionary();
         homePage.clickOnSubMenuSpare();
 
-//        sparesPage.clickOnButtonAdd();
-//        editSparePage.enterSpareName(spareName); //HW
-//        editSparePage.selectSpareTypeFromDropDown("Механикa");//HW find dropdown, open, find element and click
-//        editSparePage.clickOnButtonCreate(); //HW
+        sparesPage.clickOnButtonAdd();
+        editSparePage.enterSpareName(spareName); //HW
+        editSparePage.selectSpareTypeFromDropDown("Механикa");//HW find dropdown, open, find element and click
+        editSparePage.clickOnButtonCreate(); //HW
 
 
 

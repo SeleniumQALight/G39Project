@@ -2,6 +2,7 @@ package libs;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -34,5 +35,15 @@ public class ActionsWithOurElements {
             logger.error("Can not work with element");
             Assert.fail("Can not work with  element");
         }
+    }
+
+    public void selectTextFromDDList(WebElement webElement, String text) {
+      try{  webElement.click();
+        webDriver.findElement(By.xpath(".//*[text()='"+ text +"']")).click();
+        logger.info("Element was selected");
+      } catch (Exception e) {
+          logger.error("Can not work with element");
+          Assert.fail("Can not work with  element");
+      }
     }
 }
