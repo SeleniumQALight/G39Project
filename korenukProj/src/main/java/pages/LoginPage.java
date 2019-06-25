@@ -76,7 +76,19 @@ public class LoginPage extends ParentPage {
             logger.error("Can not work with element ");
             Assert.fail("Can not work with element");
     }
-}}
+}
+
+    public void loginWithCred(String login, String pass) {
+        openPage();
+        enterTextIntoInputLogin(login);
+        enterTextInToInputPass(pass);
+        clickOnButtonVhod();
+    }
+
+    public void validLogin() {
+    loginWithCred("Student","909090");
+    }
+}
 
 
 

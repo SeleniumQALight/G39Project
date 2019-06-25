@@ -22,7 +22,7 @@ public class LoginTest {
         webDriver = new ChromeDriver();
 
         webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
     }
     @Test
