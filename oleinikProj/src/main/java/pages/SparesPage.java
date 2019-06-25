@@ -16,4 +16,8 @@ public class SparesPage extends ParentPage{
     public void clickOnButtonAdd() {
         actionsWithOurElements.clickOnElement(buttonAdd);
     }
+
+    public boolean isSpareInList(String spareName) {
+        return actionsWithOurElements.isElementDisplayed(".//*[text()='"+spareName+"']");
+    }
 }

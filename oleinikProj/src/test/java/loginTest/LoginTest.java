@@ -36,7 +36,7 @@ public class LoginTest {
         Assert.assertTrue("Avatar is not present",
 //                webDriver.findElement(By.xpath(".//*[@class='pull-left image']"))
 //                        .isDisplayed()
-                homePage.iaAvatarPresent()
+                homePage.isAvatarPresent()
         );
     }
 
@@ -49,7 +49,7 @@ public class LoginTest {
         webDriver.findElement(By.id("password")).sendKeys("9090");
         webDriver.findElement(By.tagName("button")).click();
         HomePage homePage = new HomePage(webDriver);
-        Assert.assertFalse("Account not found",homePage.iaAvatarPresent());
+        Assert.assertFalse("Account not found",homePage.isAvatarPresent());
 //        System.out.println("Account not found");
     }
 
