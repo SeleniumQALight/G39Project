@@ -3,6 +3,7 @@ package libs;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -24,5 +25,29 @@ public class ActionsWithOurElements {
             logger.error("Can not work with element");
             Assert.fail("Can not work with element");
         }
+    }
+
+    public void clickOnElement(WebElement webElement) {
+        try {
+            webElement.click();
+            logger.info("Element was clicked");
+        }catch (Exception e) {
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
+        }
+    }
+
+
+    public void selectTextInDD (WebElement webElement, String text){
+        webElement.click();
+        webDriver.findElement(By.xpath(".//*[text()='" + text +"']")).click();
+        try {
+            webElement.click();
+            logger.info("Element was clicked");
+        }catch (Exception e) {
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
+        }
+
     }
 }
