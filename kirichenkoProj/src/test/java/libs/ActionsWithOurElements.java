@@ -41,7 +41,7 @@ public class ActionsWithOurElements {
     public void selectTextInDD (WebElement webElement, String text){
         webElement.click();
         webDriver.findElement(By.xpath(".//*[text()='" + text +"']")).click();
-        try {
+      /*  try {
             webElement.click();
             logger.info("Element was clicked");
         }catch (Exception e) {
@@ -49,5 +49,5 @@ public class ActionsWithOurElements {
             Assert.fail("Can not work with element");
         }
 
-    }
+   */ }
 }
