@@ -32,7 +32,7 @@ Delete the entity in Dictionaries->Apparatus
 4. Press “Delete” —>Entity was deleted. Page http://v3.test.itpmgroup.com/dictionary/apparat is opened. List of entries created previously is visible and scrollable
 5. Refresh page http://v3.test.itpmgroup.com/dictionary/apparat is opened. —>Deleted entity doesn’t appear in the list
 
-
+//test
 Case4
 Creation of new entity in the Deals list
 1. Open main page http://v3.test.itpmgroup.com/. —> Page is opened
