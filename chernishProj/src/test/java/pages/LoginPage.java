@@ -79,4 +79,8 @@ public class LoginPage extends ParentPage{
         clickOnButtonVhod();
 
     }
+
+    public void validLogin() {
+        loginWithCred("Student","909090");
+    }
 }

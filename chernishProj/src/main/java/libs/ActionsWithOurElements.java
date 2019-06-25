@@ -25,4 +25,29 @@ public class ActionsWithOurElements {
         }
 
     }
+
+    public void clickOnElement(WebElement webElement) {
+        try{
+            webElement.click();
+            logger.info("Element was clicked");
+
+        }catch (Exception e){
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
+        }
+
+    }
+
+
+    public void FindElement(WebElement webElement) {
+        try{
+            webElement.isEnabled();
+            logger.info("Element exist");
+
+        }catch (Exception e){
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
+        }
+
+    }
 }
