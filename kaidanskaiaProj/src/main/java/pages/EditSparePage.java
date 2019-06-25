@@ -9,7 +9,7 @@ public class EditSparePage extends ParentPage {
     private WebElement inputSpareName;
     @FindBy (id="spares_spareType")
     private WebElement typeDD;
-    @FindBy (xpath="//*[@class='btn btn-info']")
+    @FindBy (name="add")
     private WebElement buttonCreate;
 
     public EditSparePage(WebDriver webDriver) {
@@ -22,7 +22,7 @@ public class EditSparePage extends ParentPage {
     }
 
     public void selectSpareTypeFromDropDown(String spareType) {
-        actionsWithOurElements.selectTextFromDDList(typeDD, spareType);
+        actionsWithOurElements.selectTextInDDByJava(typeDD, spareType);
 
     }
 
