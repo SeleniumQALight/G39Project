@@ -36,16 +36,9 @@ public class ActionsWithOurElements {
         }
     }
 
-    public void selectTextInDD (WebElement webElement, String text){
-        try {
-        webElement.click();
-        logger.info("Element was clicked");
-        webDriver.findElement(By.xpath(".//*[text()='" + text + "']")).click();
-        logger.info("Element was clicked");
-        }catch (Exception e) {
-            logger.error("Can not work with element");
-            Assert.fail("Can not work with element");
-        }
+    public void selectTextInDD (WebElement dropDown, String text) {
+        clickOnElement(dropDown);
+        clickOnElement(".//*[text()='" + text + "']");
     }
 
 
@@ -79,6 +72,16 @@ public class ActionsWithOurElements {
            return isElementDisplayed(webDriver.findElement(By.xpath(locator)));
         }catch (Exception e){
             return false;
+        }
+    }
+
+    public void clickOnElement(String locator) {
+        try{
+           clickOnElement(webDriver.findElement(By.xpath(locator)));
+            logger.info("Element was clicked");
+        }catch (Exception e) {
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
         }
     }
 }
