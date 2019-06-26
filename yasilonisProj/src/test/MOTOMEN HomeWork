@@ -1,0 +1,61 @@
+http://motomen.com.ua/
+
+TC1
+Go to home page
+Click to Magnifier button with empty search text field
+ER: Message "Please fill out this field"
+
+TC2
+Go to home page
+On header click to Facebook icon
+ER: Link https://www.facebook.com/Motomen-248230888640558/ is opened
+
+TC3
+Open "Akcii" tab
+Select some product
+On opened product page click to "kupit" button
+Go to basket (click to "oformit zakaz" on header)
+On opened window input valid parameters:
+ - Имя - test
+ - Телефон - 1234
+ - Эл. почта - bla@bla.bla
+ - Город - test
+ - Способ доставки - Новая почта
+ - Номер склада «Новой почты» - 1
+Click to "Oformit zakaz"
+ER: "ВАШ ЗАКАЗ ОТПРАВЛЕН!" message and on admin panel order is present with same info
+
+TC4
+Go to home page
+Input to search text field for ex. "1"
+Click to Magnifier button
+ER: max 50 product displayed on 1 page
+
+TC5
+Go to home page
+Input to search text field for ex. "1"
+Click to Magnifier button
+Select some product on search page
+ER: product page is opened, no any errors
+
+
+homePage
+homePage.Search.Button=xpath(".//input[@class='submit button_search']")
+homePage.Fb.Button=xpath(".//a[@class='button_fb']")
+homePage.Header.Akcii.Button=xpath(".//div[@class='wrap_topmenu']//a[contains(text(),'Акции')]")
+homePage.SearchField.Input=xpath(".//input[@class='input_search']")
+actionsPage
+actionsPage.Product1.Select(".//div[@class='wrap_productgrid']//a[1]")
+productPage
+productPage.Kupit.Button(".//a[@class='button_buy g_button color_yellow']")
+productPage.Korzina.Button(".//a[@id='unit_mini_cart']")
+cartPage
+cartPage.Name.Input(".//input[@id='order_name']")
+cartPage.Tel.Input(".//input[@id='order_tel']")
+cartPage.Email.Input(".//input[@id='order_email']")
+cartPage.City.Input(".//input[@id='order_city']")
+cartPage.DostavkaNP.Button(".//a[@class='item_switch switch_np']")
+cartPage.NomerNP.Input(".//input[@id='order_np']")
+cartPage.OformitZakaz.Button(".//a[@class='g_button size_big color_yellow']")
+catalogSearchPage
+catalogSearchPage.Product.Button(".//div[@id='unit_items_catalog']//a[2]")

@@ -1,0 +1,28 @@
+http://v3.test.itpmgroup.com/dashboard
+
+TC1
+Click on Home button (Domoy)
+ER: http://v3.test.itpmgroup.com/ is opened
+
+TC2
+Open browser to full screen
+Go to main tab(Glavnaya)
+Click to hamburger menu on left header side
+ER: Left side menu is hidden
+
+TC3
+Open /dictionary/workers#
+Click Plus button on right side
+On opened window input some symbols to first text field (Work surname)
+Click Create button (Sozdat)
+ER: message appeared near second text field:  "Please fill out on this field"
+
+TC4
+Open /dictionary/installation
+Click to some item of the list "Spisok rabot"
+ER: item is opened for editing, no any errors
+
+TC5
+Open /dictionary/service
+Click Plus button on right side
+ER: opened new window for creating item, no any errors

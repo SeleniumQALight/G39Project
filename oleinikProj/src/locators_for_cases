@@ -1,0 +1,37 @@
+#Registration
+Registration.Link.Zaregestrirovatsya=xpath(“.//a[@href='register.html']”)
+
+#Password recovery
+PasswordRecovery.Link.NapomnitParol=xpath(“.//a[@href='#']”)
+
+#Authorization
+LoginBox.Email.Input=xpath(“.//input[@name='_username']”)
+LoginBox.Password.Input=xpath(“.//input[@name='_password']”)
+LoginBox.Button.Vxod=xpath(“.//button[@type='submit']”)
+
+
+#Add apparat
+
+General.SidebarToggle=xpath(“.//a[@href='#' and @class='sidebar-toggle']”)
+General.SidebarToggle.Slovare=xpath(“.//li[@id='dictionary']”)
+General.SidebarToggle.Slovare.Apparat=xpath(“.//a[@href='/dictionary/apparat']”)
+General.SidebarToggle.Slovare.Apparat.Add=xpath(“.//a[@class='btn btn-info btn-sm']”)
+
+Slovar.ApparatNumber.Input=xpath(“.//input[@id='apparat_apparatNumber']”)
+Slovar.ApparatComment.Input=xpath(“.//input[@id='apparat_apparatComment']”)
+Slovar.Button.Sozdat=xpath(“.//button[@type='submit']”)
+
+
+#Editing machine
+
+ListOfDevices.ApparatNumber=xpath(“.//td[text()=15]”)
+Editing.ApparatNumber=xpath(“.//input[@id='apparat_apparatNumber']”)
+Editing.ApparatComment=xpath(“.//input[@id='apparat_apparatComment']”)
+Editing.Button.Sohranit=xpath(“.//button[@name='save']”)
+
+#Delete
+
+Editing.Button.Udalit=xpath(“.//button[@name='delete']”)
+
+
+
