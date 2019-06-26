@@ -14,6 +14,7 @@ public class AddNewSpareTest extends ParentTest {
        homePage.clickOnSubMenuSpare();
 
        sparesPage.deletSpareUntilPresent(spareName);
+
        sparesPage.clickOnButtonAdd();
 
        editSparePage.enterSpareName(spareName);
