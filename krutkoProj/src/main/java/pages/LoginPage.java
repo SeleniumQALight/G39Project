@@ -32,38 +32,37 @@ public class LoginPage extends ParentPage {
     }
 
     public void enterTextInToInputLogin(String login) {
-      //  try {
-      //     // WebElement inputLogin = webDriver.findElement(By.name("_username"));
-       //     inputLogin.clear();
-      //      inputLogin.sendKeys(login);
-      //      logger.info(login + "inputted into input login");
-      //  } catch (Exception e) {
-      //      logger.error("Can't work with element");
-      //      Assert.fail("Can't work with element");
+        //  try {
+        //     // WebElement inputLogin = webDriver.findElement(By.name("_username"));
+        //     inputLogin.clear();
+        //      inputLogin.sendKeys(login);
+        //      logger.info(login + "inputted into input login");
+        //  } catch (Exception e) {
+        //      logger.error("Can't work with element");
+        //      Assert.fail("Can't work with element");
 //
-      //  }
+        //  }
         actionsWithOurElements.enterTextInToInput(inputLogin, login);
     }
 
     public void enterTextInToInputPass(String pass) {
-      //  try {
-      //     // WebElement inputPass = webDriver.findElement(By.id("password"));
-      //      inputPass.clear();
-      //      inputPass.sendKeys(pass);
-      //      logger.info(pass + "inputted into input password");
-      //  } catch (Exception e) {
-      //      logger.error("Can't work with element");
-       //     Assert.fail("Can't work with element");
-      //  }
+        //  try {
+        //     // WebElement inputPass = webDriver.findElement(By.id("password"));
+        //      inputPass.clear();
+        //      inputPass.sendKeys(pass);
+        //      logger.info(pass + "inputted into input password");
+        //  } catch (Exception e) {
+        //      logger.error("Can't work with element");
+        //     Assert.fail("Can't work with element");
+        //  }
         actionsWithOurElements.enterTextInToInput(inputPass, pass);
     }
 
     public void clickOnButtonVhod() {
-        try{
-          //   WebElement buttonVhod = webDriver.findElement(By.tagName("button"));
+        try {
             buttonVhod.click();
             logger.info("Button was clicked on");
-        }catch (Exception e) {
+        } catch (Exception e) {
             logger.error("Can't work with element");
             Assert.fail("Can't work with element");
         }
@@ -77,6 +76,6 @@ public class LoginPage extends ParentPage {
     }
 
     public void validLogin() {
-        loginWithCred("Stusent", "909090");
+        loginWithCred("Student", "909090");
     }
 }
