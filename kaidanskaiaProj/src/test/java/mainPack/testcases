@@ -1,0 +1,88 @@
+Preconditions:
+1. Open http://v3.test.itpmgroup.com/
+2. Login as student // 909090
+
+
+1TC Create new employee
+
+Steps to reproduce:
+
+1. Go to section "Словари" in left menu
+2. Open tab "Сотрудники"
+3. Click on "+" button in right top corner
+4. Fill the form. eg:
+Worker surname -> Jurov
+Worker name -> Petro
+Worker middle name -> Ivanovych
+Worker phone -> 876765657767686
+5. Click on button "Создать"
+
+Expected result
+
+New user Jurov Petro Ivanovych created, form is closed,
+user is redirected to employees list. New created employee is shown in the end of this list
+
+
+2TC Spares editing
+Preconditions:
+1. Open http://v3.test.itpmgroup.com/
+2. Login as student // 909090
+
+Steps to reproduce:
+
+1. Go to section "Словари" in left menu
+2. Open tab "Запчасти"
+3. Click on any spare in list eg "Пластиковое колесо шнека"
+4. Change "Тип детали" -> select new type from dropdown list
+5. Click on button "Сохранить" below the form
+
+Expected result
+Editing form with fields "Spare name" and "Тип детали" is opened,
+user can select another value from dropdown list "Тип детали",
+after confirming changes by click on "Сохранить" button user is redirected to spares list
+new spare type is shown for "Пластиковое колесо шнека"
+
+3TC New apparat creation
+
+1. Go to section "Словари" in left menu
+2. Open tab "Аппарат"
+3. Click on "+" button in right top corner
+4. Fill the form eg
+
+Apparat number 5454545
+Apparat comment транклюкатор
+
+5. Click on "Создать" button below the form
+
+Expected result
+New apparat created, user is redirected to apparats list, new created транклюкатор
+is shown in the ent of the list
+
+4TC Delete employee
+
+Steps to reproduce
+
+1. Go to section "Словари" in left menu
+2. Open tab "Сотрудники"
+3. Find Jurov Petro Ivanovych and click on this name
+4. Click on "Удалить" button below the form
+
+Expected result
+Employee is deleted, user is redirected to employees list,
+Jurov Petro Ivanovych is absent in workers list
+
+5TC Delete apparat
+
+1. Go to section "Словари" in left menu
+2. Open tab "Аппарат"
+3. Find "транклюкатор" in the list and click on it to open details
+4. Click on button "Удалить" below the form
+
+Expected result
+
+Apparat is deleted, user is redirected to apparats list,
+"транклюкатор" is absent in apparats list
+
+
+
+

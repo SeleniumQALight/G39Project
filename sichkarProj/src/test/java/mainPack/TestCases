@@ -1,0 +1,65 @@
+Case 1. Successful login
+
+Steps:
+1. Open page http://v3.test.itpmgroup.com
+2. Enter "Student" in the "Email" input , "909090" in input "Password"
+3. Press the button "Вход"
+
+Expected results: Successful login. Opening the main page.
+
+-------------------------------------------------------------------------------
+
+Case 2. Successful Adding New Employee
+
+Pre-Conditions: Successful login from Case 1
+Steps:
+1. Click the menu item "Словари"
+2. Click on the sub-item "Сотрудники"
+3. Press the "+ (Add)" button
+4. Fill in the fields Worker surname, Worker name, Worker middle name, Worker phone with values Test 1/2/3/4
+5. Click the button "Создать"
+6. Check whether the created employee is in the "Employees" list
+
+Expected results: Successful employee creation and adding it to the grid.
+
+------------------------------------------------------------------------------
+
+Case 3. Adding New spare
+
+Pre-Conditions: Successful login from Case 1
+Steps:
+1. Click the menu item "Словари"
+2. Click the sub-item "Запчаcти"
+3. Press the "+ (Add)" button
+4. Enter TestName in the field "Spare name"
+5. Click in the dropdown "Тип Детали" and select "Механика"
+6. Click the button "Создать"
+7. Check whether the created employee is in the “Spare” list
+
+Expected results: Successful spare creation and adding it to the grid.
+
+-------------------------------------------------------------------------------
+
+Case 4. Opening user profile
+
+Pre-Conditions: Successful login from Case 1
+Steps:
+1. Click the button with user icon in the upper right corner
+2. In the pop-up press the button "Профиль"
+
+Expected results: Opening user profile
+
+-------------------------------------------------------------------------------
+Case 5. Add New Deal
+
+Pre-Conditions: Successful login from Case 1
+Steps:
+1. Click the menu item "Сделки"
+2. Press the "+ (Add)" button
+3. In the "Deal date", "Тип сделки" "Покупатель" "Поставищик" field, select random data from the dropouts
+4. Click the button "Создать"
+5. Check whether the created employee is in the "Deal" list
+
+Expected results: Successful Deal creation and adding it to the grid.
+
+-------------------------------------------------------------------------------
