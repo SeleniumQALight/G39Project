@@ -1,5 +1,6 @@
 package spares;
 
+import org.junit.After;
 import org.junit.Test;
 import parentTest.ParentTest;
 
@@ -8,15 +9,25 @@ public class AddNewSpareTest extends ParentTest {
     @Test
     public void addNewSpare (){
         loginPage.validLogin();
-        homePage.isAvatarPresent();
+        homePage.checkIsAvatarDisplayed();
         homePage.clickOnDictionary();
         homePage.clickOnSubMenuSpare();
 
+        sparesPage.deleteSpareUntilPresent(spareName);
         sparesPage.clickOnButtonAdd();
         editSparesPage.enterSpareName(spareName);
        editSparesPage.selectSpareTypeFromDropdown("Механикa");
         editSparesPage.clickOnCreate();
         editSparesPage.findNewElementOnList();
 
+
+
+        checkExpectedResult("Cann`t find spare in the list", true, sparesPage.isSpareInList(spareName));
+
+    }
+
+    @After
+    public void deleteSpare(){
+        sparesPage.deleteSpareUntilPresent(spareName);
     }
 }

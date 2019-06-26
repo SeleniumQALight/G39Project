@@ -2,8 +2,10 @@ package libs;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class ActionsWithOurElements {
     WebDriver webDriver;
@@ -38,6 +40,24 @@ public class ActionsWithOurElements {
 
     }
 
+    /**
+     * method selects visible text in DD
+     * @param dropDown
+     * @param text
+     */
+    public void seelctTextIDDByJava(WebElement dropDown, String text){
+        try {
+            Select select = new Select(dropDown);
+            select.selectByVisibleText(text);
+            logger.info(text+" was selected in DD");
+
+        }catch (Exception e){
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
+        }
+    }
+
+
 
     public void FindElement(WebElement webElement) {
         try{
@@ -49,5 +69,25 @@ public class ActionsWithOurElements {
             Assert.fail("Can not work with element");
         }
 
+    }
+
+
+    public boolean isElementDispalyed(WebElement element) {
+
+        try{
+            return element.isDisplayed();
+        }
+        catch (Exception e){
+            return false;
+        }
+    }
+
+    public boolean isElementDispalyed(String locator) {
+       try{
+           return isElementDispalyed(webDriver.findElement(By.xpath(locator)));
+
+       }catch(Exception e){
+           return false;
+       }
     }
 }
