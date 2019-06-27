@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class ActionsWithOutElements {
     WebDriver webDriver;
@@ -37,16 +38,53 @@ public class ActionsWithOutElements {
         }
     }
 
-    public void selectTextInDD(WebElement element, String sparetype) {
+    public void clickOnElement(String locator) {
         try {
-            element.click();
-            webDriver.findElement(By.xpath(".//select[@id='spares_spareType']//option[text()='" + sparetype + "']")).click();
-            logger.info("Text in DropDown was finded");
+            clickOnElement(webDriver.findElement(By.xpath(locator)));
+
         } catch (Exception e) {
             logger.error("Can't work with element");
             Assert.fail("Can't work with element");
         }
     }
 
+    public void selectTextInDD(WebElement dropDown, String text) {
+        clickOnElement(dropDown);
+        clickOnElement(".//select[@id='spares_spareType']//option[text()='" + text + "']");
+    }
 
+
+    /**
+     * visibleText
+     *
+     * @param dropDown
+     * @param text
+     */
+
+    public void selectTextInDDByJava(WebElement dropDown, String text) {
+        try {
+            Select select = new Select(dropDown);
+            select.deselectByVisibleText(text);
+            logger.info(text + " was selecte in DD");
+        } catch (Exception e) {
+            logger.error("Can't work with element");
+            Assert.fail("Can't work with element");
+        }
+    }
+
+    public boolean isElementDisplayed(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isElementDisplayed(String locator) {
+        try {
+            return isElementDisplayed(webDriver.findElement(By.xpath(locator)));
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
