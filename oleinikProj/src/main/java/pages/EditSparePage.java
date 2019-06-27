@@ -12,9 +12,12 @@ public class EditSparePage extends ParentPage  {
     private WebElement inputSpareName;
     @FindBy(xpath=".//button[@name='add']")
     private WebElement buttonCreate;
+    @FindBy(name = "delete")
+
+    private WebElement buttonDelete;
 
     public EditSparePage(WebDriver webDriver) {
-        super(webDriver);
+        super(webDriver, "/dictionary/spares/edit");
     }
 
     public void selectSpareTypeFromDropDown(String spareType) {
@@ -27,5 +30,9 @@ public class EditSparePage extends ParentPage  {
 
     public void clickOnButtonCreate() {
         actionsWithOurElements.clickOnElement(buttonCreate);
+    }
+
+    public void clickOnButtonDelete() {
+        actionsWithOurElements.clickOnElement(buttonDelete);
     }
 }
