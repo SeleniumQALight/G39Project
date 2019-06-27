@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,19 +11,26 @@ public class HomePages extends ParentPage {
     private WebElement menuDictionary;
     @FindBy(xpath = ".//li[@id='spares' ]")
     private WebElement subMenuSpare;
+    @FindBy(xpath =".//*[@class='pull-left image']" )
+    private WebElement avatar;
 
 
     public HomePages(WebDriver webDriver) {
-        super(webDriver);
+        super(webDriver, "/");
     }
 
     public boolean isAvatarPresent(){
+       return actionsWithOurElements.isElementDisplayed(avatar);
 
-        try {
-            return webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed();
-        } catch (Exception e){
-            return false;
-        }
+    //    try {
+         //   return avatar.isDisplayed();
+       // } catch (Exception e){
+        //    return false;
+      //  }
+    }
+
+    public void checkIsAvatarDisplayed(){
+        Assert.assertTrue("Avatar is not present", isAvatarPresent());
     }
 
     public void clickOnDictionary() {
