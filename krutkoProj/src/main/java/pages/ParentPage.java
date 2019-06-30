@@ -26,6 +26,9 @@ abstract class ParentPage {
         expectedURL = BASE_URL + partURL;
     }
 
+    public ParentPage(WebDriver webDriver) {
+    }
+
     public void checkCurrentURL(){
        try{
            Assert.assertEquals("URL is not expected", expectedURL, webDriver.getCurrentUrl());

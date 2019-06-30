@@ -44,6 +44,11 @@ public class ActionsWithOurElements {
             Assert.fail("Can't work with element");
         }
     }
+
+    //public void clickOnButtonCreate (){
+    //    clickOnElement(webDriver.findElement(By.xpath(".//*[@name='add']")));
+    //}
+
     public void selectTextInDrop(WebElement dropDown, String text) {
         clickOnElement(dropDown);
         clickOnElement(".//*[text()='" + text + "']");
@@ -81,9 +86,4 @@ public class ActionsWithOurElements {
         }
     }
 
-
-    // public void selectTextInDrop (WebElement webElement, String text){
-     //   webElement.click();
-     //   webElement.findElement(By.xpath(".//*[text()='" + text + "']")).click();
-    //}
 }
