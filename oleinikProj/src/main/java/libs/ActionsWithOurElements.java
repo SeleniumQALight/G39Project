@@ -84,4 +84,8 @@ public class ActionsWithOurElements {
             Assert.fail("Can not work with element");
         }
     }
+
+    public void selectElementCheckbox(String text) {
+      clickOnElement(".//label[text()='" +text + "']");
+    }
 }
