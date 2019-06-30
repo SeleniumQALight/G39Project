@@ -31,4 +31,6 @@ public class EditSparePage extends ParentPage {
     public void clickOnButtonCreate() {
         actionsWithOurElements.clickOnElement(buttonAddNewSpare);
     }
+
+
 }

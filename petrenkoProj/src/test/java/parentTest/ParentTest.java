@@ -15,13 +15,14 @@ import java.util.concurrent.TimeUnit;
 
 public class ParentTest {
     WebDriver webDriver;
-  protected    LoginPage loginPage;
-  protected   HomePage homePage;
-  protected SparesPage sparesPage;
-  protected EditSparePage editSparePage;
+    protected LoginPage loginPage;
+    protected HomePage homePage;
+    protected SparesPage sparesPage;
+    protected EditSparePage editSparePage;
+
     @Before
 
-    public void  setup(){
+    public void setup() {
         File file = new File("./src/old_drivers/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
         webDriver = new ChromeDriver();
@@ -35,12 +36,12 @@ public class ParentTest {
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         webDriver.quit();
 
     }
 
-    public  void checkExpectedResult(String message, boolean expectedResult, boolean actualResult){
+    public void checkExpectedResult(String message, boolean expectedResult, boolean actualResult) {
 
         Assert.assertEquals(message, expectedResult, actualResult);
 
