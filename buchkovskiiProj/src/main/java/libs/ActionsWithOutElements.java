@@ -53,6 +53,10 @@ public class ActionsWithOutElements {
         clickOnElement(".//select[@id='spares_spareType']//option[text()='" + text + "']");
     }
 
+    public void selectStatusCheckbox(WebElement checkBox){
+        clickOnElement(checkBox);
+    }
+
 
     /**
      * visibleText
@@ -87,4 +91,7 @@ public class ActionsWithOutElements {
             return false;
         }
     }
+
+
+
 }

@@ -13,6 +13,8 @@ public class HomePage extends ParentPage {
     private WebElement menuDictionary;
     @FindBy(xpath = ".//li[@id='spares']")
     private WebElement subMenuSpare;
+    @FindBy(xpath = ".//li[@id='prov_cus']")
+    private WebElement subMenuProviders;
     @FindBy(xpath = ".//*[@class='pull-left image']")
     private WebElement avatar;
 
@@ -35,6 +37,10 @@ public class HomePage extends ParentPage {
 
     public void clickOnSubMenuSpare() {
         actionsWithOutElements.clickOnElement(subMenuSpare);
-
     }
+
+    public void clickOnSubMenuProviders() {
+        actionsWithOutElements.clickOnElement(subMenuProviders);
+    }
+
 }
