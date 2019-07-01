@@ -19,7 +19,7 @@ public class HomePage extends  ParentPage{
 
 
     public HomePage(WebDriver webDriver) {
-        super(webDriver);
+        super(webDriver, "/");
     }
 
     public boolean isAvatarPresent(){

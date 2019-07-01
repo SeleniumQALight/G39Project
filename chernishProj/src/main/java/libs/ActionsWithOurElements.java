@@ -40,6 +40,22 @@ public class ActionsWithOurElements {
 
     }
 
+
+
+
+
+    public void clickOnElement(String locator){
+        try{
+            clickOnElement(webDriver.findElement(
+                    By.xpath(locator)));
+        }catch (Exception e){
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
+        }
+    }
+
+
+
     /**
      * method selects visible text in DD
      * @param dropDown

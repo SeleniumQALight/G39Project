@@ -18,9 +18,13 @@ public class EditSparesPage extends  ParentPage{
     @FindBy(xpath = ".//table[@id='device_list']//tbody//td[contains(text(),'Chernysh')]")
     private WebElement newSpare;
 
+    @FindBy (name="delete")
+    private WebElement buttonDelete;
+
+
 
     public EditSparesPage(WebDriver webDriver) {
-        super(webDriver);
+        super(webDriver, "/dictionary/spares/edit");
     }
 
     public void enterSpareName(String spareName) {
@@ -41,5 +45,9 @@ public class EditSparesPage extends  ParentPage{
 
     public void findNewElementOnList() {
         actionWithOurElements.FindElement(newSpare);
+    }
+
+    public void clickOnButtonDelete() {
+        actionWithOurElements.clickOnElement(buttonDelete);
     }
 }
