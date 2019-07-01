@@ -12,17 +12,20 @@ public class AddNewSpareTest extends ParentTest {
     @Test
     public void addNewSpare() {
         loginPage.validLogin();
+        homePage.checkCurrentUrl();
         homePage.checkIsAvatarDisplaed();
         homePage.clickOnDictionary();
         homePage.clickOnSubMenuSpare();
-
+        sparesPage.checkCurrentUrl();
         sparesPage.deleteSpareUtilPresent(spareName);
 
 
         sparesPage.clickOnButtonAdd();
+        editSparePage.checkCurrentUrl();
         editSparePage.enterSpareName(spareName);
         editSparePage.selectSpareTypeFromDropDown(spareType);
         editSparePage.clickOnButtonCreate();
+        sparesPage.checkCurrentUrl();
         checkExpectedResult("Can not find in list", true, sparesPage.isSpareInList(spareName));
 
 

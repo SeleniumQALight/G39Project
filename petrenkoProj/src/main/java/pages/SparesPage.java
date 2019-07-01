@@ -13,7 +13,7 @@ public class SparesPage extends ParentPage {
   //  private WebElement buttonDelete;
 
     public SparesPage(WebDriver webDriver) {
-        super(webDriver);
+        super(webDriver, "/dictionary/spares");
     }
 
     public void clickOnButtonAdd() {

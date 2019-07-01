@@ -12,7 +12,7 @@ public class LoginPage extends ParentPage{
 
     public LoginPage(WebDriver webDriver) {
 
-        super(webDriver);
+        super(webDriver, "/login");
     }
 
     @FindBy(name = "_username")
@@ -78,6 +78,7 @@ public class LoginPage extends ParentPage{
 
     public void loginWithCred(String login, String pass) {
         openPage();
+        checkCurrentUrl();
         enterTextInToInputLogin(login);
         enterTextInToInputPass(pass);
         clickOnButtonVhod();
