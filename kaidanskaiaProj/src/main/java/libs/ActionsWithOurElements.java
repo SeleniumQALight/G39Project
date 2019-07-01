@@ -92,4 +92,58 @@ public class ActionsWithOurElements {
         } catch (Exception e){
             return false;}
     }
+
+    /**
+     * Method check if line with 3 defined fields contains expected text in 4th field
+     * @param td1
+     * @param td2
+     * @param td3
+     * @param text
+     * @return
+     */
+    public boolean isLineContainText(String td1, String td2, String td3, String text) {
+         try{ return webDriver.findElement(By.xpath(".//tr[.//td[1][text()='"+td1+"']" +
+                 " and .//td[2][text()='"+td2+"'] " +
+                 "and .//td[3][text()='"+td3+"']]//td[4]")).getText().contentEquals(text);
+
+        } catch (Exception e){
+            return false;}
+    }
+
+    /**
+     * Method check or uncheck checkbox
+     * @param webElement
+     * @param status
+     */
+    public void setCheckBoxStatus(WebElement webElement, String status) {
+        try{
+            if (webElement.isSelected()==true){
+                if(status=="check"){
+                    logger.info("Checkbox is selected by default");
+                }
+                if (status == "uncheck"){
+                    clickOnElement(webElement);
+                    logger.info("Checkbox was unselected by click");
+                }
+            }
+            if (webElement.isSelected()==false){
+            if (status=="check"){
+                clickOnElement(webElement);
+                logger.info("Checkbox selected by click");
+            }
+            if (status == "uncheck"){
+               logger.info("Checkbox is not selected by default");
+
+            }
+        }
+
+
+        }
+
+         catch (Exception e) {
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with  element");
+        }
+
+    }
 }
