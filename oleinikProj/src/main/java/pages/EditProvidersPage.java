@@ -1,9 +1,10 @@
 package pages;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 
 public class EditProvidersPage extends ParentPage {
 
@@ -17,6 +18,11 @@ public class EditProvidersPage extends ParentPage {
     private WebElement buttonCreate;
     @FindBy(xpath = ".//button[@name='delete']")
     private WebElement buttonDelete;
+    @FindBy(xpath = ".//input[@id='prov_cus_proCustIsFl']")
+    private WebElement privatePerson;
+    @FindBy(xpath = ".//input[@id='prov_cus_isOurFirm']")
+    private WebElement isOurFirm;
+
 
     public EditProvidersPage(WebDriver webDriver) {
         super(webDriver, "/dictionary/providers/edit");
@@ -42,8 +48,11 @@ public class EditProvidersPage extends ParentPage {
         actionsWithOurElements.clickOnElement(buttonDelete);
     }
 
-    public void setStatusToCheckbox(String checkboxType) {
-        actionsWithOurElements.selectElementCheckbox(checkboxType);
+    public void statusToCheckboxPrivatePerson(boolean status) {
+       actionsWithOurElements.setStatusToCheckbox(privatePerson, status);
     }
 
+    public void setStatusToCheckboxIsOurFirm(boolean status) {
+        actionsWithOurElements.setStatusToCheckbox(isOurFirm, status);
+    }
 }
