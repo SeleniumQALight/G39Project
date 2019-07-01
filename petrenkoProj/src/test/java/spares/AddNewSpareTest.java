@@ -1,11 +1,12 @@
 package spares;
 
+import libs.Utils;
 import org.junit.After;
 import org.junit.Test;
 import parentTest.ParentTest;
 
 public class AddNewSpareTest extends ParentTest {
-    final String spareName = "Petrenko1981";
+    final String spareName = "Petrenko1981" + Utils.getDateAndTimeFormated();
     final String spareType = "Датчики";
 
     @Test

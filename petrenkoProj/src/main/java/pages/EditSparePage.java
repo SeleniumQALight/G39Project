@@ -13,6 +13,9 @@ public class EditSparePage extends ParentPage {
     private WebElement typeDD;
 
     private WebElement typeSpareName;
+    @FindBy(name = "delete")
+    private WebElement buttonDelete;
+
 
     public EditSparePage(WebDriver webDriver) {
         super(webDriver);
@@ -33,4 +36,7 @@ public class EditSparePage extends ParentPage {
     }
 
 
+    public void clickOnButtonDelete() {
+        actionsWithOurElements.clickOnElement(buttonDelete);
+    }
 }

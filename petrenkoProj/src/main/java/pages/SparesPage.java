@@ -1,6 +1,7 @@
 package pages;
 
 import libs.ActionsWithOurElements;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,8 +9,8 @@ import org.openqa.selenium.support.FindBy;
 public class SparesPage extends ParentPage {
     @FindBy(xpath = "//*[@class='fa fa-plus']")
     private WebElement buttonAdd;
-    @FindBy(xpath = ".//*[@name = 'delete']")
-    private WebElement buttonDelete;
+  //  @FindBy(xpath = ".//*[@name = 'delete']")
+  //  private WebElement buttonDelete;
 
     public SparesPage(WebDriver webDriver) {
         super(webDriver);
@@ -23,11 +24,23 @@ public class SparesPage extends ParentPage {
         return actionsWithOurElements.isElementDisplayed(".//*[text() ='" + spareName + "']");
     }
 
+    public  void clickOnSpare(String spareName){
+        actionsWithOurElements.clickOnElement(".//*[text() ='" + spareName + "']");
+    }
+
     public void deleteSpareUtilPresent(String spareName) {
-        while (actionsWithOurElements.isElementDisplayed(".//*[text() ='" + spareName + "']")) {
-            actionsWithOurElements.clickOnElement(".//*[text() ='" + spareName + "']");
-            actionsWithOurElements.isElementDisplayed(buttonDelete);
-            actionsWithOurElements.clickOnElement(buttonDelete);
+        int counter = 0;
+        EditSparePage editSparePage = new EditSparePage(webDriver);
+        while (isSpareInList(spareName)) {
+            clickOnSpare(spareName);
+            editSparePage.clickOnButtonDelete();
+            logger.info(spareName + " Was removed");
+            if(counter > 100){
+                Assert.fail("There are more than 100 spares");
+            }
+            counter++;
+          //  actionsWithOurElements.isElementDisplayed(buttonDelete);
+           // actionsWithOurElements.clickOnElement(buttonDelete);
         }
 
     }
