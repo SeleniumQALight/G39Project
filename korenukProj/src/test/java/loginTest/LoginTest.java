@@ -22,7 +22,7 @@ public class LoginTest {
         webDriver = new ChromeDriver();
 
         webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
     }
     @Test
@@ -44,6 +44,17 @@ public class LoginTest {
    Assert.assertTrue("Avatar is not present",
 
         homePage.isAvatarPresent());
+
+    }
+    @Test
+    public void invalidLogin(){
+        webDriver.get("http://v3.test.itpmgroup.com");
+        webDriver.findElement(By.name("_username")).clear();
+        webDriver.findElement(By.name("_username")).sendKeys("Students");
+        webDriver.findElement(By.id("password")).sendKeys("909090");
+        webDriver.findElement(By.tagName("button")).click();
+        HomePage homePage= new HomePage(webDriver);
+        Assert.assertTrue("Authorization window is not displayed ", homePage.authorizationPage());
 
     }
 

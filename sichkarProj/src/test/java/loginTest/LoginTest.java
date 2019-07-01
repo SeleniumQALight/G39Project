@@ -38,6 +38,7 @@ public class LoginTest {
 
         Assert.assertTrue("Avatar is not present" ,
 
+
                 //webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed()
 
         homePage.isAvatarPresent()
@@ -56,10 +57,10 @@ public class LoginTest {
         webDriver.findElement(By.tagName("button")).click();
         HomePage homePage = new HomePage(webDriver);
 
-        Assert.assertTrue("Login form is not visible" ,
+        Assert.assertTrue("Text authorization is not visible" ,
        // assert webDriver.getPageSource().contains("Авторизация");
 
-        homePage.isNotValidLogin());
+        homePage.isTextAutorisationPage());
 
     }
 
