@@ -32,11 +32,12 @@ public class SparesPage extends ParentPage {
         while (isSpareInList(spareName)) {
             clickOnSpare(spareName);
             editSparePage.clickOnButtonDelete();
+            counter++;
             logger.info(counter + " Spare was deletted");
             if (counter > 100){
                 Assert.fail("There are more than 100 spares. ");
             }
-            counter++;
+
         }
     }
 }

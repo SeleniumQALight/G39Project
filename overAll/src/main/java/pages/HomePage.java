@@ -5,12 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.element.Link;
 
 public class HomePage extends ParentPage{
     @FindBy(xpath = ".//li[@id='dictionary']")
-    private WebElement menuDictionary;
+    private Link menuDictionary;
     @FindBy(xpath = ".//li[@id='spares']")
-    private WebElement subMenuSpare;
+    private Link subMenuSpare;
 
     @FindBy(xpath = ".//*[@class='pull-left image']")
     private WebElement avatar;
