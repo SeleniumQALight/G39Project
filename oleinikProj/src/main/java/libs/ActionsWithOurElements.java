@@ -85,7 +85,14 @@ public class ActionsWithOurElements {
         }
     }
 
-    public void selectElementCheckbox(String text) {
-      clickOnElement(".//label[text()='" +text + "']");
+    public void setStatusToCheckbox (WebElement webElement, boolean status) {
+        try {
+            if (webElement.isSelected() == status){
+            logger.info("Correct status checkbox");}
+            else {clickOnElement(webElement);}
+        } catch (Exception e) {
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
+        }
     }
 }
