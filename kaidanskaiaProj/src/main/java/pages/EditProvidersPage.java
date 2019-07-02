@@ -47,7 +47,15 @@ public class EditProvidersPage extends ParentPage {
         actionsWithOurElements.setCheckBoxStatus(privatePerson, status);
     }
 
+    public void setChBPrivatePersonStatus(String status) {
+        actionsWithOurElements.setCheckBoxStatus(privatePerson, status);
+    }
+
     public void setChBIsOurFirmStatus(boolean status) {
+        actionsWithOurElements.setCheckBoxStatus(isOurFirm, status);
+    }
+
+    public void setChBIsOurFirmStatus(String status) {
         actionsWithOurElements.setCheckBoxStatus(isOurFirm, status);
     }
 

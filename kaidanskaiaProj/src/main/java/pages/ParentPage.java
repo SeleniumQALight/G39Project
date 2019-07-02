@@ -6,6 +6,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.regex.Pattern;
+
 abstract public class ParentPage {
     WebDriver webDriver;
 
@@ -24,7 +26,9 @@ abstract public class ParentPage {
 
     public void checkCurrentUrl(){
         try{
-            Assert.assertEquals("URL is not expected",expectedURL,webDriver.getCurrentUrl());
+            logger.info(expectedURL);
+            logger.info(webDriver.getCurrentUrl());
+            Assert.assertEquals("URL is not expected", Pattern.matches(expectedURL,webDriver.getCurrentUrl()), true);
         } catch (Exception e){
             logger.error("Can not get URL" + e);
             Assert.fail("Can not get URL");

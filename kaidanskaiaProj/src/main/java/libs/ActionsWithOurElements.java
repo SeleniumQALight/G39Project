@@ -5,14 +5,20 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ActionsWithOurElements {
     WebDriver webDriver;
     Logger logger = Logger.getLogger(getClass());
+    WebDriverWait wait10, wait15;
 
     public ActionsWithOurElements(WebDriver webDriver) {
+
         this.webDriver = webDriver;
+        wait10 = new WebDriverWait(webDriver, 10);
+        wait15 = new WebDriverWait(webDriver, 15);
     }
 
     public void enterTextIntoInput(WebElement element, String text) {
@@ -30,6 +36,8 @@ public class ActionsWithOurElements {
 
     public void clickOnElement(WebElement webElement) {
         try {
+            wait10.until(ExpectedConditions.elementToBeClickable(webElement));
+            // Example for not syntax wait10.until(ExpectedConditions.not(ExpectedConditions.elementToBeClickable(webElement)))
             webElement.click();
             logger.info("Element was clicked");
         } catch (Exception e) {
@@ -117,33 +125,46 @@ public class ActionsWithOurElements {
      */
     public void setCheckBoxStatus(WebElement webElement, boolean status) {
         try{
-            if (webElement.isSelected()==true){
-                if(status==true){
+            if (webElement.isSelected()&& status){
                     logger.info("Checkbox is selected by default");
-                }
-                if (status == false){
+                } else if (webElement.isSelected() && !status){
                     clickOnElement(webElement);
                     logger.info("Checkbox was unselected by click");
                 }
-            }
-            if (webElement.isSelected()==false){
-            if (status==true){
+            else if (!webElement.isSelected()&& status){
                 clickOnElement(webElement);
                 logger.info("Checkbox selected by click");
-            }
-            if (status == false){
+            } else  if (!webElement.isSelected() && !status){
                logger.info("Checkbox is not selected by default");
 
             }
         }
-
-
-        }
-
          catch (Exception e) {
             logger.error("Can not work with element");
             Assert.fail("Can not work with  element");
         }
 
+    }
+
+    public void setCheckBoxStatus(WebElement checkBox, String status){
+        boolean isStatusCheck = "check".equals(status.toLowerCase());
+        boolean isStatusUncheck = "uncheck".equals(status.toLowerCase());
+
+        if (isStatusCheck || isStatusUncheck ){
+            if (checkBox.isSelected() && isStatusCheck){
+                logger.info("Checkbox has been already selected");
+            } else if (checkBox.isSelected() && isStatusUncheck){
+                clickOnElement(checkBox);
+                logger.info("Checkbox unselected by click");
+            } else  if (!checkBox.isSelected() && isStatusCheck){
+                clickOnElement(checkBox);
+                logger.info("Checkbox is selected by click");
+            } else if (!checkBox.isSelected() && isStatusUncheck){
+                logger.info("Checkbox has been already unselected");
+            }
+
+        } else {
+            Assert.fail("Status should be 'check' or 'uncheck'");
+        }
     }
 }

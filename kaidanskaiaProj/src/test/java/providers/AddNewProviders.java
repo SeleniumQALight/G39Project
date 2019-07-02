@@ -27,8 +27,8 @@ public class AddNewProviders extends ParentTest {
     editProvidersPage.enterProcustName(proCustName);
     editProvidersPage.enterProcustAddress(proCustAddress);
     editProvidersPage.enterProcustPhone(proCustPhone);
-    editProvidersPage.setChBPrivatePersonStatus(check);
-    editProvidersPage.setChBIsOurFirmStatus(uncheck);
+    editProvidersPage.setChBPrivatePersonStatus("check");
+    editProvidersPage.setChBIsOurFirmStatus("uncheck");
     editProvidersPage.clickOnButtonCreate();
 
     providersPage.checkCurrentUrl();

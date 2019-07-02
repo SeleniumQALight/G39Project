@@ -27,6 +27,7 @@ public class ProvidersPage extends ParentPage {
 
     public boolean isProviderPrivatePerson(String proCustName, String proCustAddress, String proCustPhone) {
         return actionsWithOurElements.isLineContainText(proCustName,proCustAddress,proCustPhone,"1");
+
     }
 
 
