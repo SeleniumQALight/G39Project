@@ -98,4 +98,13 @@ public class ActionsWithOurElements {
             return false;
         }
     }
+
+    public  void setStatusCheckBox(WebElement providerCheckBox, boolean statusCheckBox){
+        if(statusCheckBox = false){
+            clickOnElement(providerCheckBox);
+        }
+        else {
+            Assert.fail("ChackBox is ckacked");
+        }
+    }
 }
