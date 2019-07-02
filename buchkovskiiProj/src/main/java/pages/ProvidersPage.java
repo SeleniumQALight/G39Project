@@ -18,31 +18,10 @@ public class ProvidersPage  extends ParentPage{
         actionsWithOutElements.clickOnElement(buttonAdd);
     }
 
-    public boolean isSpareInList(String proCustName) {
-            return actionsWithOutElements.isElementDisplayed(".//*[text()='" + proCustName + "']");
+    public boolean isProvidersInList(String proCustName) {
 
-    }
-/*
-    public void deleteProvidersUntillPresent(String proCustName) {
-        int counter=0;
-        EditProviderPage editProviderPage = new EditProviderPage(webDriver);
-        while (isSpareInList(proCustName)) {
-            clickSpare(spareName);
-            editSparePage.clickOnButtonDelete();
-            logger.info(counter + "Spare was deleted");
-            if (counter>100){
-                Assert.fail("There are were more than 100 spares");
-            }
-            counter++;
-        }
-    }
-
-
-    public boolean isSpareInList(String proCustName) {
         return actionsWithOutElements.isElementDisplayed(".//*[text()='" + proCustName + "']");
     }
-
- */
 
 
 }

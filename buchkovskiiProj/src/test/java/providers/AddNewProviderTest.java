@@ -18,16 +18,16 @@ public class AddNewProviderTest extends ParentTest {
         homePage.checkIsAvatarDisplayed();
         homePage.clickOnDictionary();
         homePage.clickOnSubMenuProviders();
-
-
         providersPage.checkIfPageOpen();
-       /* providersPage.clickOnButtonAdd();
+        providersPage.clickOnButtonAdd();
         editProviderPage.checkIfPageOpen();
         editProviderPage.enterProCustName(proCustName);
         editProviderPage.enterProCustAddress(proCustAddress);
         editProviderPage.enterProCustPhone(proCustPhone);
-        editProviderPage.choosePrivatePersonFromCheckbox();
-        editSparePage.clickOnButtonCreate();*/
+        editProviderPage.clickOnPrivatePersonFromCheckbox();
+        editProviderPage.clickOnButtonCreate();
+        providersPage.checkIfPageOpen();
+        checkExpectedResult("Can not find spare in List", true, providersPage.isProvidersInList(proCustName));
     }
 
 

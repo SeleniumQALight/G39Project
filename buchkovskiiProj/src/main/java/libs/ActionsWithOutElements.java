@@ -53,10 +53,34 @@ public class ActionsWithOutElements {
         clickOnElement(".//select[@id='spares_spareType']//option[text()='" + text + "']");
     }
 
-    public void selectStatusCheckbox(WebElement checkBox){
-        clickOnElement(checkBox);
-    }
+    public void setStatusToCheckBox(WebElement checkBox, String status) {
+        try {
+            if (checkBox.isSelected() == true) {
 
+                if (status == "uncheck") {
+                    clickOnElement(checkBox);
+                    logger.info("Checkbox is uncheck");
+                }
+                if (status == "check") {
+                    logger.info("Checkbox is check");
+                }
+            }
+
+            if (checkBox.isSelected() == false) {
+
+                if (status == "uncheck") {
+                    logger.info("Checkbox is uncheck");
+                }
+                if (status == "check") {
+                    clickOnElement(checkBox);
+                    logger.info("Checkbox is check");
+                }
+            }
+        }catch (Exception e){
+            logger.error("Can't not work element");
+            Assert.fail("Can't not work element");
+        }
+    }
 
     /**
      * visibleText
@@ -91,7 +115,6 @@ public class ActionsWithOutElements {
             return false;
         }
     }
-
 
 
 }

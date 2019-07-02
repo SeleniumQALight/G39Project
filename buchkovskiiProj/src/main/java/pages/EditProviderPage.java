@@ -14,6 +14,8 @@ public class EditProviderPage  extends ParentPage{
     private WebElement providerPhoneField;
     @FindBy(xpath = ".//input[@id='prov_cus_proCustIsFl']")
     private WebElement privatePerson;
+    @FindBy(xpath = ".//button[@type='submit']")
+    private WebElement buttonCreate;
 
 
     public EditProviderPage(WebDriver webDriver) {
@@ -32,7 +34,11 @@ public class EditProviderPage  extends ParentPage{
         actionsWithOutElements.enterTextIntoInput(providerPhoneField, proCustPhone);
     }
 
-    public void choosePrivatePersonFromCheckbox() {
-        actionsWithOutElements.clickOnElement(privatePerson);
+    public void clickOnPrivatePersonFromCheckbox () {
+        actionsWithOutElements.setStatusToCheckBox(privatePerson, "check");
+    }
+
+    public void clickOnButtonCreate() {
+        actionsWithOutElements.clickOnElement(buttonCreate);
     }
 }
