@@ -25,6 +25,8 @@ public class LoginTest {
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
+
+
     @Test
     public void validLogIn(){
 
