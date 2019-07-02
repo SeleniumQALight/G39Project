@@ -26,8 +26,6 @@ abstract class ParentPage {
         expectedURL = BASE_URL + partURL;
     }
 
-    public ParentPage(WebDriver webDriver) {
-    }
 
     public void checkCurrentURL(){
        try{

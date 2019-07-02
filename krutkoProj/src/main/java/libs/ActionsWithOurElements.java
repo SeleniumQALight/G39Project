@@ -36,7 +36,7 @@ public class ActionsWithOurElements {
         }
     }
 
-    public void clickOnElement (String locator) {
+    public void clickOnElement(String locator) {
         try {
             clickOnElement(webDriver.findElement(By.xpath(locator)));
         } catch (Exception e) {
@@ -56,6 +56,7 @@ public class ActionsWithOurElements {
 
     /**
      * method selects visible text in dropdown
+     *
      * @param dropDown
      * @param text
      */
@@ -73,17 +74,25 @@ public class ActionsWithOurElements {
     public boolean isElementDisplayed(WebElement element) {
         try {
             return element.isDisplayed();
-        } catch (Exception e){
+        } catch (Exception e) {
             return false;
         }
     }
 
     public boolean isElementDisplayed(String locator) {
-        try{
+        try {
             return isElementDisplayed(webDriver.findElement(By.xpath(locator)));
-        }catch (Exception e){
+        } catch (Exception e) {
             return false;
         }
     }
 
+    //public boolean setStatusToCheckbox(WebElement status) {
+    //    try {
+    //        status.click();
+    //    } catch (Exception e) {
+    //        return false;
+    //    }
+    //    return false;
+    //}
 }

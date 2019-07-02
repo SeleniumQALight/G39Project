@@ -25,7 +25,7 @@ public class EditCustPage extends ParentPage{
     //}
 
     public EditCustPage(WebDriver webDriver) {
-        super(webDriver);
+        super(webDriver,"/dictionary/providers/edit");
     }
 
     public void enterCustName(String custName) {
@@ -51,4 +51,8 @@ public class EditCustPage extends ParentPage{
     public void clickOnbuttonCreate() {
         actionsWithOurElements.clickOnElement(buttonCreate);
     }
+
+    //public void checkboxPrivate(WebElement status) {
+    //    actionsWithOurElements.setStatusToCheckbox(WebElement, status);
+    //}
 }

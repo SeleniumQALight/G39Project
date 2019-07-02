@@ -16,8 +16,6 @@ public class AddNewCustTest extends ParentTest {
         homePage.clickOnDictionary();
         homePage.clickOnSubMenuDealSides();
 
-        Utils.waitABit(10);
-
         dealSidesPage.clickOnButtonAdd();
         editCustPage.enterCustName(custName);
         editCustPage.enterCustAddress(custAddress);
@@ -25,6 +23,9 @@ public class AddNewCustTest extends ParentTest {
 
         editCustPage.checkOnPrivate();
         editCustPage.checkOnFirm();
+
+        //editCustPage.checkboxPrivate();
+        //editCustPage.checkboxFirm();
         editCustPage.clickOnbuttonCreate();
 
     }
