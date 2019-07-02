@@ -19,14 +19,15 @@ public class AddNewProviderTest extends ParentTest {
         homePage.clickOnDictionary();
         homePage.clickOnSubMenuProviders();
 
+
         providersPage.checkIfPageOpen();
-        providersPage.clickOnButtonAdd();
-        providersPage.checkIfPageOpen();
+       /* providersPage.clickOnButtonAdd();
+        editProviderPage.checkIfPageOpen();
         editProviderPage.enterProCustName(proCustName);
         editProviderPage.enterProCustAddress(proCustAddress);
         editProviderPage.enterProCustPhone(proCustPhone);
         editProviderPage.choosePrivatePersonFromCheckbox();
-        editSparePage.clickOnButtonCreate();
+        editSparePage.clickOnButtonCreate();*/
     }
 
 
