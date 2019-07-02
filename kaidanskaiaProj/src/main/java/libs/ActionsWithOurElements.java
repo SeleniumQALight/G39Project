@@ -115,23 +115,23 @@ public class ActionsWithOurElements {
      * @param webElement
      * @param status
      */
-    public void setCheckBoxStatus(WebElement webElement, String status) {
+    public void setCheckBoxStatus(WebElement webElement, boolean status) {
         try{
             if (webElement.isSelected()==true){
-                if(status=="check"){
+                if(status==true){
                     logger.info("Checkbox is selected by default");
                 }
-                if (status == "uncheck"){
+                if (status == false){
                     clickOnElement(webElement);
                     logger.info("Checkbox was unselected by click");
                 }
             }
             if (webElement.isSelected()==false){
-            if (status=="check"){
+            if (status==true){
                 clickOnElement(webElement);
                 logger.info("Checkbox selected by click");
             }
-            if (status == "uncheck"){
+            if (status == false){
                logger.info("Checkbox is not selected by default");
 
             }

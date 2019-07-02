@@ -7,8 +7,11 @@ import parentTest.ParentTest;
 
 public class AddNewProviders extends ParentTest {
     final String proCustName = "Keidanska" + Utils.getDateAndTimeFormated();
-    final String proCustAddress = "Pluk" + Utils.getDateAndTimeFormated();
-    final String proCustPhone = "990099900000" + Utils.getDateAndTimeFormated();
+    final String proCustAddress = "Pluk";
+    final String proCustPhone = "990099900000";
+
+    final boolean check = true;
+    final boolean uncheck = false;
 @Test
     public void addNewProviders() {
     loginPage.validLogin();
@@ -24,8 +27,8 @@ public class AddNewProviders extends ParentTest {
     editProvidersPage.enterProcustName(proCustName);
     editProvidersPage.enterProcustAddress(proCustAddress);
     editProvidersPage.enterProcustPhone(proCustPhone);
-    editProvidersPage.setChBPrivatePersonStatus("check");
-    editProvidersPage.setChBIsOurFirmStatus("uncheck");
+    editProvidersPage.setChBPrivatePersonStatus(check);
+    editProvidersPage.setChBIsOurFirmStatus(uncheck);
     editProvidersPage.clickOnButtonCreate();
 
     providersPage.checkCurrentUrl();
@@ -35,8 +38,8 @@ public class AddNewProviders extends ParentTest {
 
     }
 
-//    @After
-//    public void deleteProvider(){
-//    providersPage.deleteProvidersDuplicateUntilPresent(proCustName, proCustAddress, proCustPhone);
-//    }
+    @After
+    public void deleteProvider(){
+    providersPage.deleteProvidersDuplicateUntilPresent(proCustName, proCustAddress, proCustPhone);
+    }
 }

@@ -17,6 +17,8 @@ public class EditProvidersPage extends ParentPage {
     private WebElement privatePerson;
     @FindBy (id = "prov_cus_isOurFirm")
     private WebElement isOurFirm;
+    @FindBy (name = "delete")
+    private WebElement buttonDelete;
 
 
     public EditProvidersPage(WebDriver webDriver) {
@@ -41,11 +43,15 @@ public class EditProvidersPage extends ParentPage {
         actionsWithOurElements.clickOnElement(buttonCreate);
     }
 
-    public void setChBPrivatePersonStatus(String status) {
+    public void setChBPrivatePersonStatus(boolean status) {
         actionsWithOurElements.setCheckBoxStatus(privatePerson, status);
     }
 
-    public void setChBIsOurFirmStatus(String status) {
+    public void setChBIsOurFirmStatus(boolean status) {
         actionsWithOurElements.setCheckBoxStatus(isOurFirm, status);
+    }
+
+    public void clickOnButtonDelete() {
+        actionsWithOurElements.clickOnElement(buttonDelete);
     }
 }
