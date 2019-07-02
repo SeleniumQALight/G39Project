@@ -31,7 +31,6 @@ public class AddNewSpareTest extends ParentTest {
     }
 
     @After
-    //test
     public void deleteSpare(){
         sparesPage.deleteSpareUntilPresent(spareName);
     }

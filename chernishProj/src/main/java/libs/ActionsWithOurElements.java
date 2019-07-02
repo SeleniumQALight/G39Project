@@ -28,6 +28,8 @@ public class ActionsWithOurElements {
 
     }
 
+
+
     public void clickOnElement(WebElement webElement) {
         try{
             webElement.click();
@@ -39,6 +41,19 @@ public class ActionsWithOurElements {
         }
 
     }
+
+    public void changeCheckboxState(WebElement checkBox, boolean select){
+        if(select){
+            if(!checkBox.isSelected()){
+                clickOnElement(checkBox);
+            }
+        }else{
+            if(checkBox.isSelected()){
+                clickOnElement(checkBox);
+            }
+        }
+    }
+
 
 
 

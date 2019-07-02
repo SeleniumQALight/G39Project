@@ -9,7 +9,8 @@ public class SparesPage extends ParentPage{
     @FindBy (xpath = ".//*[@class='fa fa-plus']")
     private WebElement buttonAdd;
 
-    public SparesPage(WebDriver webDriver) {
+    public SparesPage(WebDriver webDriver)
+    {
         super(webDriver, "/dictionary/spares");
     }
 
