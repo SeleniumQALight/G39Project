@@ -9,28 +9,27 @@ public class AddNewProviderTest extends ParentTest {
     final String providerName = "Name" + Utils.getDateAndTimeFormated();
     final String providerAddress = "Address" + Utils.getDateAndTimeFormated();
     final String providerPhone = "Phone" + Utils.getDateAndTimeFormated();
-    final boolean checkStatusCheckBox = true;
-    final boolean unCheckStatusCheckBox = true;
+
 
     @Test
-    public void addNewSpare() {
+    public void addNewProviderTest() {
         loginPage.validLogin();
       //  homePage.checkCurrentUrl();
         homePage.checkIsAvatarDisplaed();
 
         homePage.clickOnDictionary();
         homePage.clickOnSubMenuProvider();
-       // providersPage.checkCurrentUrl();
+        providersPage.checkCurrentUrl();
        // providersPage.deleteSpareUtilPresent(unitProvider);
 
 
         providersPage.clickOnButtonAdd();
-       // editProviderPage.checkCurrentUrl();
+        editProviderPage.checkCurrentUrl();
 
         editProviderPage.enterProviderName(providerName);
         editProviderPage.enterProviderAddress(providerAddress);
         editProviderPage.enterProviderPhone(providerPhone);
-        editProviderPage.selectProviderCheckBox(checkStatusCheckBox);
+        editProviderPage.setStatusProviderCheckBox("check");
         editProviderPage.clickOnButtonCreate();
         providersPage.checkCurrentUrl();
         //checkExpectedResult("Can not find in list", true, providersPage.isSpareInList(spareName));

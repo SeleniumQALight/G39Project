@@ -40,7 +40,7 @@ public class EditProviderPage extends ParentPage {
         actionsWithOurElements.clickOnElement(createNewProvider);
     }
 
-    public  void selectProviderCheckBox(boolean statusCheckBox){
-        actionsWithOurElements.setStatusCheckBox(providerCheckBox, statusCheckBox);
+    public  void setStatusProviderCheckBox(String statusCheckBox){
+        actionsWithOurElements.setStatusToCheckBox(providerCheckBox, statusCheckBox);
     }
 }
