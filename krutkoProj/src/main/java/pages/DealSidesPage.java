@@ -15,4 +15,8 @@ public class DealSidesPage extends ParentPage{
     public void clickOnButtonAdd() {
         actionsWithOurElements.clickOnElement(buttonAdd);
     }
+
+    public void deleteCustUntilPresent(String custName) {
+
+    }
 }
