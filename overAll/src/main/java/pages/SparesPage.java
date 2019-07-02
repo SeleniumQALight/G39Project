@@ -10,33 +10,33 @@ public class SparesPage extends ParentPage {
     private WebElement buttonAdd;
 
     public SparesPage(WebDriver webDriver) {
-        super(webDriver, "/dictionary/spares");
+        super(webDriver,"/dictionary/spares");
     }
 
     public void clickOnButtonAdd() {
         actionsWithOurElements.clickOnElement(buttonAdd);
     }
 
-
     public boolean isSpareInList(String spareName) {
-        return actionsWithOurElements.isElementDisplayed(".//*[text()='"+spareName+"']");
+        return actionsWithOurElements.isElementDisplayed(
+                ".//*[text()='"+spareName+"']");
     }
 
     public void clickOnSpare(String spareName){
         actionsWithOurElements.clickOnElement(".//*[text()='" + spareName + "']");
     }
 
-    public void deleteSpareDuplicateUntilPresent(String spareName) {
+    public void deletSpareUntilPresent(String spareName) {
         int counter = 0;
         EditSparePage editSparePage = new EditSparePage(webDriver);
         while (isSpareInList(spareName)) {
             clickOnSpare(spareName);
             editSparePage.clickOnButtonDelete();
-            logger.info("Spare was deleted");
-            if(counter > 100){
-                Assert.fail("There are more than 100 spares in list");
+            logger.info(counter + " Spare was deletted");
+            if (counter > 100){
+                Assert.fail("There are more than 100 spares. ");
             }
-            counter ++;
+            counter++;
         }
     }
 }
