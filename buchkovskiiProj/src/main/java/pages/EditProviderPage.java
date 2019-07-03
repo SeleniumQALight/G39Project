@@ -34,8 +34,12 @@ public class EditProviderPage  extends ParentPage{
         actionsWithOutElements.enterTextIntoInput(providerPhoneField, proCustPhone);
     }
 
-    public void choosePrivatePersonFromCheckbox() {
-        actionsWithOutElements.clickOnElement(privatePerson);
+    public void choosePrivatePersonFromCheckbox(String status) {
+        actionsWithOutElements.setCheckBoxStatus(privatePerson, status );
+    }
+
+    public void chooseIsOurFirmFromCheckbox(String status) {
+        actionsWithOutElements.setCheckBoxStatus(privatePerson, status);
     }
 
     public void clickOnButtonCreate() {
