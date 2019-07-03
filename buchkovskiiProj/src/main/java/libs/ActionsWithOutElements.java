@@ -5,14 +5,19 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ActionsWithOutElements {
     WebDriver webDriver;
     Logger logger = Logger.getLogger(getClass());
+    WebDriverWait wait10, wait15;
 
     public ActionsWithOutElements(WebDriver webDriver) {
         this.webDriver = webDriver;
+        wait10 = new WebDriverWait(webDriver, 10);
+        wait15 = new WebDriverWait(webDriver, 15);
     }
 
     public void enterTextIntoInput(WebElement element, String text) {
@@ -26,9 +31,10 @@ public class ActionsWithOutElements {
         }
     }
 
-
     public void clickOnElement(WebElement element) {
         try {
+            wait10.until(ExpectedConditions.elementToBeClickable(element));
+            // Example for not syntax wait10.until(ExpectedConditions.not(ExpectedConditions.elementToBeClickable(webElement)))
             element.click();
             logger.info("Element was clicked");
 
@@ -89,6 +95,28 @@ public class ActionsWithOutElements {
             return isElementDisplayed(webDriver.findElement(By.xpath(locator)));
         } catch (Exception e) {
             return false;
+        }
+    }
+
+    public void setCheckBoxStatus(WebElement checkBox, String status){
+        boolean isStatusCheck = "check".equals(status.toLowerCase());
+        boolean isStatusUncheck = "uncheck".equals(status.toLowerCase());
+
+        if (isStatusCheck || isStatusUncheck ){
+            if (checkBox.isSelected() && isStatusCheck){
+                logger.info("Checkbox has been already selected");
+            } else if (checkBox.isSelected() && isStatusUncheck){
+                clickOnElement(checkBox);
+                logger.info("Checkbox unselected by click");
+            } else  if (!checkBox.isSelected() && isStatusCheck){
+                clickOnElement(checkBox);
+                logger.info("Checkbox is selected by click");
+            } else if (!checkBox.isSelected() && isStatusUncheck){
+                logger.info("Checkbox has been already unselected");
+            }
+
+        } else {
+            Assert.fail("Status should be 'check' or 'uncheck'");
         }
     }
 
