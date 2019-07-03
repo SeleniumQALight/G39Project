@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends ParentPage{
 
     public LoginPage(WebDriver webDriver) {
-        super(webDriver);
+        super(webDriver, "/login");
     }
 
     @FindBy (name = "_username")
@@ -74,6 +74,7 @@ public class LoginPage extends ParentPage{
 
     public void loginWithCred(String login, String password) {
         openPage();
+        checkIfPageOpen();
         enterTextInToInputLogin(login);
         enterTextInToInputPassword(password);
         clickOnButtonVhod();
