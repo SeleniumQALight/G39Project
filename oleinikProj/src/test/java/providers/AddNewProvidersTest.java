@@ -10,13 +10,9 @@ public class AddNewProvidersTest extends ParentTest {
 final String provaiderName = "Oleynik_" + Utils.getDateAndTimeFormated();
 final String providerAddress = "My_address";
 final String providerPhone = "My_phone";
-    boolean checked = true;
-    boolean unchecked = false;
-
-
 
     @Test
-    public void addNewProviders(){
+    public void addNewProvidersPrivatePerson(){
         loginPage.validLogin();
 
         homePage.checkCurrentUrl();
@@ -33,11 +29,42 @@ final String providerPhone = "My_phone";
         editProvidersPage.enterProviderAddress(providerAddress);
         editProvidersPage.enterProviderPhone(providerPhone);
 
-        editProvidersPage.statusToCheckboxPrivatePerson(checked);
-        editProvidersPage.setStatusToCheckboxIsOurFirm(checked);
+        editProvidersPage.statusToCheckboxPrivatePerson("check");
+        editProvidersPage.setStatusToCheckboxIsOurFirm("uncheck");
         editProvidersPage.clickOnButtonCreate();
 
         providersPage.checkCurrentUrl();
+        providersPage.checkLablPrivatePerson(provaiderName);
+
+        checkExpectedResult("Can not find provider in list",
+                true, providersPage.isProviderInList(provaiderName));
+    }
+
+
+    @Test
+    public void addNewProvidersIsOurFirm(){
+        loginPage.validLogin();
+
+        homePage.checkCurrentUrl();
+        homePage.isAvatarPresent();
+        homePage.clickOnDictionary();
+        homePage.clickOnSubMenuProviders();
+
+        providersPage.checkCurrentUrl();
+        providersPage.deleteProvidersUntilPresent(provaiderName);
+        providersPage.clickOnButtonAdd();
+
+        editProvidersPage.checkCurrentUrl();
+        editProvidersPage.enterProviderName(provaiderName);
+        editProvidersPage.enterProviderAddress(providerAddress);
+        editProvidersPage.enterProviderPhone(providerPhone);
+
+        editProvidersPage.statusToCheckboxPrivatePerson("uncheck");
+        editProvidersPage.setStatusToCheckboxIsOurFirm("check");
+        editProvidersPage.clickOnButtonCreate();
+
+        providersPage.checkCurrentUrl();
+
         checkExpectedResult("Can not find provider in list",
                 true, providersPage.isProviderInList(provaiderName));
     }
@@ -46,4 +73,5 @@ final String providerPhone = "My_phone";
     public void deleteProvider(){
         providersPage.deleteProvidersUntilPresent(provaiderName);
     }
+
 }
