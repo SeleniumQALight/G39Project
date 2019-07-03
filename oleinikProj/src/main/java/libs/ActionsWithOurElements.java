@@ -94,16 +94,6 @@ public class ActionsWithOurElements {
         }
     }
 
-    public void setStatusToCheckbox (WebElement webElement, boolean status) {
-        try {
-            if (webElement.isSelected() == status){
-            logger.info("Correct status checkbox");}
-            else {clickOnElement(webElement);}
-        } catch (Exception e) {
-            logger.error("Can not work with element");
-            Assert.fail("Can not work with element");
-        }
-    }
     public  void setStatusToCheckbox(WebElement checkBox, String status){
         boolean isStatusCheck = "check".equals(status.toLowerCase());
         boolean isStatusUncheck = "uncheck".equals(status.toLowerCase());
