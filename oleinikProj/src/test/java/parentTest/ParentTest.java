@@ -45,11 +45,4 @@ public class ParentTest {
     public void checkExpectedResult (String message, boolean expectedResult, boolean actualResult){
         Assert.assertEquals(message, expectedResult, actualResult);
     }
-
-
-
-//    public void checkExpectedResult (String message, boolean actualResult){
-//        checkExpectedResult();
-//    }
-
 }
