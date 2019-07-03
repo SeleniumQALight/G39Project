@@ -19,9 +19,9 @@ public class EditProvidersPage extends ParentPage {
     @FindBy(xpath = ".//button[@name='delete']")
     private WebElement buttonDelete;
     @FindBy(xpath = ".//input[@id='prov_cus_proCustIsFl']")
-    private WebElement privatePerson;
+    private WebElement checkBoxPrivatePerson;
     @FindBy(xpath = ".//input[@id='prov_cus_isOurFirm']")
-    private WebElement isOurFirm;
+    private WebElement checkBoxisOurFirm;
 
 
     public EditProvidersPage(WebDriver webDriver) {
@@ -48,11 +48,11 @@ public class EditProvidersPage extends ParentPage {
         actionsWithOurElements.clickOnElement(buttonDelete);
     }
 
-    public void statusToCheckboxPrivatePerson(boolean status) {
-       actionsWithOurElements.setStatusToCheckbox(privatePerson, status);
+    public void statusToCheckboxPrivatePerson(String status) {
+       actionsWithOurElements.setStatusToCheckbox(checkBoxPrivatePerson, status);
     }
 
-    public void setStatusToCheckboxIsOurFirm(boolean status) {
-        actionsWithOurElements.setStatusToCheckbox(isOurFirm, status);
+    public void setStatusToCheckboxIsOurFirm(String status) {
+        actionsWithOurElements.setStatusToCheckbox(checkBoxisOurFirm, status);
     }
 }
