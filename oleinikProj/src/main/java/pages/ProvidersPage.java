@@ -1,6 +1,7 @@
 package pages;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,10 +35,17 @@ public class ProvidersPage extends ParentPage {
     }
 
     public boolean isProviderInList(String providerName) {
-        return actionsWithOurElements.isElementDisplayed(".//td[text()='" + providerName + "']");
+        return actionsWithOurElements.isElementDisplayed(
+                ".//td[text()='" + providerName + "']");
     }
 
     public void clickOnProvider(String providerName) {
         actionsWithOurElements.clickOnElement(".//td[text()='" + providerName + "']");
+    }
+
+    public void checkLablPrivatePerson(String provaiderName) {
+        Assert.assertEquals("Label physical person not installed","1",
+                webDriver.findElement(By.xpath
+                (".//tr[td='" + provaiderName + "' and td='My_address' and td='My_phone']//td[4]")).getText());
     }
 }
