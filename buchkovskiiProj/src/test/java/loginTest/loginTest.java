@@ -25,24 +25,24 @@ public class loginTest {
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-/*
-    @Test
-    public void validLoginIn (){
-        webDriver.get("http://v3.test.itpmgroup.com/");
+    /*
+        @Test
+        public void validLoginIn (){
+            webDriver.get("http://v3.test.itpmgroup.com/");
 
-        webDriver.findElement(By.name("_username")).clear();
-        webDriver.findElement(By.name("_username")).sendKeys("Student");
-        webDriver.findElement(By.id("password")).clear();
-        webDriver.findElement(By.id("password")).sendKeys("909090");
-        webDriver.findElement(By.tagName("button")).click();
+            webDriver.findElement(By.name("_username")).clear();
+            webDriver.findElement(By.name("_username")).sendKeys("Student");
+            webDriver.findElement(By.id("password")).clear();
+            webDriver.findElement(By.id("password")).sendKeys("909090");
+            webDriver.findElement(By.tagName("button")).click();
 
-        HomePage homePage = new HomePage(webDriver);
+            HomePage homePage = new HomePage(webDriver);
 
-        Assert.assertTrue("Avatar isn't present", homePage.isAvatarPresent()
-                //webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed()
-        );
-    }
-*/
+            Assert.assertTrue("Avatar isn't present", homePage.isAvatarPresent()
+                    //webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed()
+            );
+        }
+    */
     @After
     public void  after(){
         webDriver.quit();

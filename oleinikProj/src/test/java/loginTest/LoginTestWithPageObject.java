@@ -11,7 +11,7 @@ public class LoginTestWithPageObject extends ParentTest {
         loginPage.enterTextInToInputPass("909090");
         loginPage.clickOnButtonVhod();
 
-        checkExpectedResult("Avatar is not present", true, homePage.iaAvatarPresent());
+        checkExpectedResult("Avatar is not present", true, homePage.isAvatarPresent());
 
 
     }
@@ -22,6 +22,6 @@ public class LoginTestWithPageObject extends ParentTest {
 
         checkExpectedResult("Avatar should not be present"
                 , false
-                , homePage.iaAvatarPresent());
+                , homePage.isAvatarPresent());
     }
 }

@@ -5,33 +5,29 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SparesPage extends ParentPage {
+public class ProvidersPage  extends ParentPage{
 
     @FindBy(xpath = "//*[@class='fa fa-plus']")
     private WebElement buttonAdd;
 
-    public SparesPage(WebDriver webDriver) {
-        super(webDriver, "/dictionary/spares");
+    public ProvidersPage (WebDriver webDriver) {
+        super(webDriver, "/dictionary/providers");
     }
 
     public void clickOnButtonAdd() {
         actionsWithOutElements.clickOnElement(buttonAdd);
     }
 
-    public boolean isSpareInList(String spareName) {
-        return actionsWithOutElements.isElementDisplayed(".//*[text()='" + spareName + "']");
-    }
+    public boolean isSpareInList(String proCustName) {
+        return actionsWithOutElements.isElementDisplayed(".//*[text()='" + proCustName + "']");
 
-    public void clickSpare (String spareName){
-        actionsWithOutElements.clickOnElement(".//*[text()='" + spareName + "']");
     }
-
-    public void deleteSpareUntillPresent(String spareName) {
+/*
+    public void deleteProvidersUntillPresent(String proCustName) {
         int counter=0;
-        EditSparePage editSparePage = new EditSparePage(webDriver);
-        while (isSpareInList(spareName)) {
+        EditProviderPage editProviderPage = new EditProviderPage(webDriver);
+        while (isSpareInList(proCustName)) {
             clickSpare(spareName);
-            editSparePage.checkIfPageOpen();
             editSparePage.clickOnButtonDelete();
             logger.info(counter + "Spare was deleted");
             if (counter>100){
@@ -40,4 +36,13 @@ public class SparesPage extends ParentPage {
             counter++;
         }
     }
+
+
+    public boolean isSpareInList(String proCustName) {
+        return actionsWithOutElements.isElementDisplayed(".//*[text()='" + proCustName + "']");
+    }
+
+ */
+
+
 }
