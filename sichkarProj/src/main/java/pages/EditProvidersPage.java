@@ -16,9 +16,13 @@ public class EditProvidersPage extends ParentPage {
     private WebElement buttonCreate;
     @FindBy(name = "delete")
     private WebElement buttonDelete;
+    @FindBy (id= "prov_cus_proCustIsFl")
+    private WebElement PrivatePersonCheckBox;
+    @FindBy (id= "prov_cus_isOurFirm")
+    private WebElement FirmCheckBox;
 
-    public EditProvidersPage(WebDriver webDriver, String partUrl) {
-        super(webDriver, "/dictionary/providers");
+    public EditProvidersPage(WebDriver webDriver) {
+        super(webDriver, "/dictionary/providers/edit(|/\\d{1,})");
     }
 
     public void enterProCustName(String proCustName) {
@@ -42,6 +46,16 @@ public class EditProvidersPage extends ParentPage {
             Assert.fail("Can not work with element");
         }
     }
+
+    public void setPrivatePersonCheckBox(){
+        actionsWithOurElements.setStatusToCheckbox(PrivatePersonCheckBox,"check");
+    }
+
+
+    public void setFirmCheckBox(){
+        actionsWithOurElements.setStatusToCheckbox(FirmCheckBox, "uncheck");
+    }
+
     public void clickOnButtonDelete() {
         actionsWithOurElements.clickOnElement(buttonDelete);
     }
