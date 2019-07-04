@@ -42,10 +42,13 @@
           <groupId>commons-io</groupId>
           <artifactId>commons-io</artifactId>
           <version>2.6</version>
-      </dependency>
-
-  </dependencies>
-
+              </dependency>
+    <dependency>
+      <groupId>ru.yandex.qatools.htmlelements</groupId>
+      <artifactId>htmlelements-java</artifactId>
+      <version>1.18</version> <!-- 1.18+ is SELENIUM 3.5.1+ compatible -->
+    </dependency>
+    </dependencies>
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
