@@ -24,7 +24,7 @@ public class EditSparesPage extends  ParentPage{
 
 
     public EditSparesPage(WebDriver webDriver) {
-        super(webDriver, "/dictionary/spares/edit");
+        super(webDriver, "/dictionary/spares/edit(|/\\d{1,})");
     }
 
     public void enterSpareName(String spareName) {

@@ -9,7 +9,8 @@ public class SparesPage extends ParentPage{
     @FindBy (xpath = ".//*[@class='fa fa-plus']")
     private WebElement buttonAdd;
 
-    public SparesPage(WebDriver webDriver) {
+    public SparesPage(WebDriver webDriver)
+    {
         super(webDriver, "/dictionary/spares");
     }
 
@@ -31,6 +32,7 @@ public class SparesPage extends ParentPage{
         EditSparesPage editSparesPage = new EditSparesPage(webDriver);
         while(isSpareInList(spareName)) {
             clickOnSpare(spareName);
+            editSparesPage.checkCurrentUrl();
             editSparesPage.clickOnButtonDelete();
             logger.info(counter+ "Spare was deleted");
             if (counter>100){
