@@ -1,5 +1,7 @@
 package pages;
 
+import libs.ActionsWithOurElements;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,21 +15,37 @@ public class HomePage extends ParentPage {
 
     @FindBy(xpath =".//li[@id='spares']")
     private WebElement SubMenuSpare;
+    @FindBy (xpath = ".//*[@class='pull-left image']")
+    private  WebElement avatar;
+    @FindBy (xpath =".//li[@id='prov_cus']")
+    private WebElement SubMenuProviders;
 
     public HomePage(WebDriver webDriver) {
-        super(webDriver);
+        super(webDriver, "/");
     }
 
 
     public boolean isAvatarPresent() {
-        try {
-            return webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed();
-        } catch (Exception e) {
+        return ActionsWithOurElements.isElementDisplayed(avatar);
 
-            return false;
-        }
+//        try {
+//            return avatar.isDisplayed();
+//        } catch (Exception e) {
+//
+//            return false;
+//        }
 
     }
+
+    public void checkIsAvatarDisplayed(){
+        Assert.assertTrue("Avatar is not present"
+        ,isAvatarPresent());
+    }
+
+
+
+
+
 
     public boolean isTextAutorisationPage() {
         try {
@@ -48,4 +66,8 @@ public class HomePage extends ParentPage {
 
         actionsWithOurElements.clickOnElement(SubMenuSpare);
     }
+    public  void  clickOnMenuSubProviders() {
+        actionsWithOurElements.clickOnElement(SubMenuProviders);
+    }
+
 }
