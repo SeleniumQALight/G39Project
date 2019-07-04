@@ -52,6 +52,12 @@
       <version>1.18</version> <!-- 1.18+ is SELENIUM 3.5.1+ compatible -->
     </dependency>
 
+    <dependency>
+      <groupId>org.aeonbits.owner</groupId>
+      <artifactId>owner</artifactId>
+      <version>1.0.4</version>
+    </dependency>
+
 
   </dependencies>
 
@@ -104,7 +110,13 @@
       <resource>
         <directory>src/main/java/resources</directory>
       </resource>
+
+      <resource>
+        <directory>src/main/java</directory>
+      </resource>
+
     </resources>
+
 
   </build>
 </project>
