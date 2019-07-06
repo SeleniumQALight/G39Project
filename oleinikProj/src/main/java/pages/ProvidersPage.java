@@ -5,11 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.element.Button;
 
 public class ProvidersPage extends ParentPage {
 
     @FindBy(xpath = ".//*[@class='fa fa-plus']")
-    private WebElement buttonAdd;
+    private Button buttonAdd;
 
     public ProvidersPage (WebDriver webDriver){
         super(webDriver, "/dictionary/providers");
