@@ -23,18 +23,6 @@ public class ActionsWithOurElements {
         wait15 = new WebDriverWait(webDriver, 15);
     }
 
-
-    public void enterTextInToInput(WebElement element, String text){
-        try {
-            element.clear();
-            element.sendKeys(text);
-            logger.info(text + " was inputted into input");
-        } catch (Exception e) {
-            logger.error("Can not work with element");
-            Assert.fail("Can not work with element");
-        }
-    }
-
     public void enterTextInToInput(TypifiedElement element, String text){
         try {
             element.clear();
