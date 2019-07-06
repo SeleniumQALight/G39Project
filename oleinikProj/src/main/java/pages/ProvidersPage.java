@@ -48,4 +48,9 @@ public class ProvidersPage extends ParentPage {
                 webDriver.findElement(By.xpath
                 (".//tr[td='" + provaiderName + "' and td='My_address' and td='My_phone']//td[4]")).getText());
     }
+
+    public void checkLablIsOurFirm(String provaiderName) {
+        Assert.assertEquals("Label is our firm not installed","",webDriver.findElement(By.xpath
+                (".//tr[td='" + provaiderName + "' and td='My_address' and td='My_phone']//td[4]")).getText());
+    }
 }
