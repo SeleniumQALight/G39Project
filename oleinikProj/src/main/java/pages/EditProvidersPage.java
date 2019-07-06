@@ -4,16 +4,17 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.element.TextInput;
 
 
 public class EditProvidersPage extends ParentPage {
 
     @FindBy(xpath = ".//input[@id='prov_cus_proCustName']")
-    private WebElement inputProviderName;
+    private TextInput inputProviderName;
     @FindBy(xpath = ".//input[@id='prov_cus_proCustAddress']")
-    private WebElement inputProviderAddress;
+    private TextInput inputProviderAddress;
     @FindBy(xpath = ".//input[@id='prov_cus_proCustPhone']")
-    private WebElement inputProviderPhone;
+    private TextInput inputProviderPhone;
     @FindBy(xpath = ".//button[@name='add']")
     private WebElement buttonCreate;
     @FindBy(xpath = ".//button[@name='delete']")
