@@ -3,13 +3,14 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.element.TextInput;
 
 public class EditSparePage extends ParentPage  {
 
     @FindBy(xpath=".//select[@id='spares_spareType']")
     private WebElement spareDD;
     @FindBy(xpath=".//input[@id='spares_spareName']")
-    private WebElement inputSpareName;
+    private TextInput inputSpareName;
     @FindBy(xpath=".//button[@name='add']")
     private WebElement buttonCreate;
     @FindBy(name = "delete")
