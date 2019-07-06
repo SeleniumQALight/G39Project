@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 
 public class LoginPage extends ParentPage {
@@ -19,7 +20,7 @@ public class LoginPage extends ParentPage {
     private TextInput inputPass;
 
     @FindBy (tagName = "button")
-    private WebElement buttonVhod;
+    private Button buttonVhod;
 
     public void openPage() {
         try {
