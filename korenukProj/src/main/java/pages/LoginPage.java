@@ -9,11 +9,11 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends ParentPage {
     public LoginPage(WebDriver webDriver) {
-        super(webDriver);
-
+        super(webDriver, "/login");
     }
+
     @FindBy(name="_username")
-     private WebElement inputLogin;
+    private WebElement inputLogin;
     @FindBy(id="password")
     private WebElement inputPass;
     @FindBy (tagName = "button")
@@ -69,7 +69,7 @@ public class LoginPage extends ParentPage {
 
     public void clickOnButtonVhod() {
         try{
-  //          WebElement buttonVhod=webDriver.findElement(By.tagName("button"));
+           WebElement buttonVhod=webDriver.findElement(By.tagName("button"));
             buttonVhod.click();
             logger.info("Button vhod was clicked");
         } catch (Exception e) {
@@ -80,6 +80,7 @@ public class LoginPage extends ParentPage {
 
     public void loginWithCred(String login, String pass) {
         openPage();
+        checkCurrentUrl();
         enterTextIntoInputLogin(login);
         enterTextInToInputPass(pass);
         clickOnButtonVhod();
