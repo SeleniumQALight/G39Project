@@ -4,6 +4,9 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.annotations.Name;
+import ru.yandex.qatools.htmlelements.element.Button;
+import ru.yandex.qatools.htmlelements.element.CheckBox;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 
 
@@ -16,13 +19,15 @@ public class EditProvidersPage extends ParentPage {
     @FindBy(xpath = ".//input[@id='prov_cus_proCustPhone']")
     private TextInput inputProviderPhone;
     @FindBy(xpath = ".//button[@name='add']")
-    private WebElement buttonCreate;
+    private Button buttonCreate;
     @FindBy(xpath = ".//button[@name='delete']")
-    private WebElement buttonDelete;
+    private Button buttonDelete;
+    @Name("Private person")
     @FindBy(xpath = ".//input[@id='prov_cus_proCustIsFl']")
-    private WebElement checkBoxPrivatePerson;
+    private CheckBox checkBoxPrivatePerson;
+    @Name("Is our firm")
     @FindBy(xpath = ".//input[@id='prov_cus_isOurFirm']")
-    private WebElement checkBoxisOurFirm;
+    private CheckBox checkBoxisOurFirm;
 
 
     public EditProvidersPage(WebDriver webDriver) {
