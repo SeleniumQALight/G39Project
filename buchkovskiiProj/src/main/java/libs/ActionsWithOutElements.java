@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ru.yandex.qatools.htmlelements.element.TypifiedElement;
 
 public class ActionsWithOutElements {
     WebDriver webDriver;
@@ -25,6 +26,17 @@ public class ActionsWithOutElements {
             element.clear();
             element.sendKeys(text);
             logger.info(text + " was imported into input");
+        } catch (Exception e) {
+            logger.error("Can't work with element");
+            Assert.fail("Can't work with element");
+        }
+    }
+
+    public void enterTextIntoInput (TypifiedElement element, String text) {
+        try {
+            element.clear();
+            element.sendKeys(text);
+            logger.info(text + " was imported into input"+ element.getName());
         } catch (Exception e) {
             logger.error("Can't work with element");
             Assert.fail("Can't work with element");
