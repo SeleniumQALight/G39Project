@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ru.yandex.qatools.htmlelements.element.TypifiedElement;
 
 public class ActionsWithOurElements {
     WebDriver webDriver;
@@ -28,6 +29,17 @@ public class ActionsWithOurElements {
             element.clear();
             element.sendKeys(text);
             logger.info(text + " was inputted into input");
+        } catch (Exception e) {
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
+        }
+    }
+
+    public void enterTextInToInput(TypifiedElement element, String text){
+        try {
+            element.clear();
+            element.sendKeys(text);
+            logger.info(text + " was inputted into input " + element.getName());
         } catch (Exception e) {
             logger.error("Can not work with element");
             Assert.fail("Can not work with element");
