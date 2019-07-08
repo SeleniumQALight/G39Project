@@ -25,15 +25,15 @@ public class EditProviderPage extends ParentPage {
 
 
     public void enterProviderName(String text) {
-        actionsWithOurElements.enterTextInput(providerName, text);
+        actionsWithOurElements.enterTextIntoInput(providerName, text);
     }
 
     public void enterProviderAddress(String text) {
-        actionsWithOurElements.enterTextInput(providerAddress, text);
+        actionsWithOurElements.enterTextIntoInput(providerAddress, text);
     }
 
     public void enterProviderPhone(String text) {
-        actionsWithOurElements.enterTextInput(providerPhone, text);
+        actionsWithOurElements.enterTextIntoInput(providerPhone, text);
     }
 
     public void clickOnButtonCreate() {

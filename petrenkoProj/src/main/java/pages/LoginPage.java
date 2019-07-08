@@ -1,12 +1,10 @@
 package pages;
 
-import libs.ActionsWithOurElements;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.element.TextInput;
 
 public class LoginPage extends ParentPage{
 
@@ -16,10 +14,10 @@ public class LoginPage extends ParentPage{
     }
 
     @FindBy(name = "_username")
-    private WebElement inputLogin;
+    private TextInput inputLogin;
 
     @FindBy(id = "password")
-    private WebElement inputPass;
+    private TextInput inputPass;
 
     @FindBy(tagName = "button")
     private WebElement buttonVhod;
@@ -46,7 +44,7 @@ public class LoginPage extends ParentPage{
 //        Assert.fail("Can not wthis element");
 //
 //        }
-        actionsWithOurElements.enterTextInput(inputLogin,login);
+        actionsWithOurElements.enterTextIntoInput(inputLogin,login);
     }
 
     public void enterTextInToInputPass(String pass) {
@@ -59,7 +57,7 @@ public class LoginPage extends ParentPage{
 //            Assert.fail("Can not wthis element");
 //
 //        }
-        actionsWithOurElements.enterTextInput(inputPass, pass);
+        actionsWithOurElements.enterTextIntoInput(inputPass, pass);
     }
 
 

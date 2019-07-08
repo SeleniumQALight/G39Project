@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ru.yandex.qatools.htmlelements.element.TypifiedElement;
 
 
 public class ActionsWithOurElements {
@@ -47,11 +48,23 @@ public class ActionsWithOurElements {
         }
     }
 
-    public void enterTextInput(WebElement element, String text) {
+    public void enterTextIntoInput(WebElement element, String text) {
         try {
             element.clear();
             element.sendKeys(text);
             logger.info(text + " Was inputted into input");
+        } catch (Exception e) {
+            logger.error("Can not work wthis element");
+            Assert.fail("Can not work wthis element");
+        }
+
+    }
+
+    public void enterTextIntoInput(TypifiedElement element, String text) {
+        try {
+            element.clear();
+            element.sendKeys(text);
+            logger.info(text + " Was inputted into input" + element.getName());
         } catch (Exception e) {
             logger.error("Can not work wthis element");
             Assert.fail("Can not work wthis element");

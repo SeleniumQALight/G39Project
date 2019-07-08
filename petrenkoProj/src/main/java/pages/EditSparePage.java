@@ -28,7 +28,7 @@ public class EditSparePage extends ParentPage {
     }
 
     public void enterSpareName(String text) {
-        actionsWithOurElements.enterTextInput(inputSpareName, text);
+        actionsWithOurElements.enterTextIntoInput(inputSpareName, text);
     }
 
     public void clickOnButtonCreate() {
