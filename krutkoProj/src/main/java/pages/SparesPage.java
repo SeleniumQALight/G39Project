@@ -43,7 +43,7 @@ public class SparesPage extends ParentPage {
         EditSparePage editSparePage = new EditSparePage(webDriver);
         while (isSpareInList(spareName)) {
             clickOnSpare(spareName);
-            //checkCurrentURL();
+            editSparePage.checkCurrentURL();
             editSparePage.clickOnButtonDelete();
             logger.info(counter + " Spare was deleted");
             if (counter > 100){

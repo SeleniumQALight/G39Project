@@ -40,9 +40,6 @@ public class AddNewCustTest extends ParentTest {
         editCustPage.checkOnFirm();
         editCustPage.clickOnbuttonCreate();
 
-
-
-
     }
     @After
     public void deleteCust() {
