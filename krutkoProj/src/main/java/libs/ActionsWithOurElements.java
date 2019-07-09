@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ru.yandex.qatools.htmlelements.element.TypifiedElement;
 
 public class ActionsWithOurElements {
     WebDriver webDriver;
@@ -105,6 +106,17 @@ public class ActionsWithOurElements {
             }
         }else {
             Assert.fail("Status should be checked or uncheked");
+        }
+    }
+
+    public void enterTextInToInput(TypifiedElement element, String text) {
+        try {
+            element.clear();
+            element.sendKeys(text);
+            logger.info(text + " inputted into input field" + element.getName());
+        } catch (Exception e) {
+            logger.error("Can't work with element");
+            Assert.fail("Can't work with element");
         }
     }
 }

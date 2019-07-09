@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 
 public class ActionsWithOurElements {
@@ -33,6 +34,53 @@ public class ActionsWithOurElements {
             Assert.fail("Can not work with element");
         }
     }
+
+    public void clickOnElement(String locator){
+        try {
+            clickOnElement(webDriver.findElement(By.xpath(locator)));
+        }catch (Exception e) {
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
+        }
+    }
+
+    public void selectTextInDS(WebElement dropDown, String text) {
+        clickOnElement(dropDown);
+        clickOnElement(".//*[text()='" + text + "']");
+    }
+
+    /**
+     * metod selects VISIBLE text in DD
+      * @param dropDown
+     * @param text
+     */
+    public void selectTextInDDByJava(WebElement dropDown, String text){
+        try {
+            Select select = new Select(dropDown);
+            select.deselectByVisibleText(text);
+            logger.info(text + " was selected in DD");
+        }catch (Exception e) {
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
+        }
+    }
+
+    public boolean isElementDisplayed(WebElement element) {
+        try {
+            return element.isDisplayed();
+        }catch (Exception e){
+            return false;
+        }
+    }
+
+    public boolean isElementDisplayed(String locator) {
+        try {
+            return isElementDisplayed(webDriver.findElement(By.xpath(locator)));
+        }catch (Exception e){
+            return false;
+        }
+    }
+
 //   selectSpareTypeFromDropDown
 //    public void clickOnElement(WebElement webElement String text) {
 //        webElement.click();
