@@ -27,6 +27,12 @@ public class AddNewProviderTest extends ParentTest {
         editProviderPage.chooseIsOurFirmFromCheckbox("uncheck");
         editProviderPage.clickOnButtonCreate();
 
+        providersPage.checkIfPageOpen();
+        System.out.println(proCustName);
+        checkExpectedResult("Can not find providers in List", true, providersPage.isProviderInList(proCustName));
+
+        //checkExpectedResult("Can not find new provider in List", true, providersPage.isProviderInList(proCustName, proCustAddress, proCustPhone));
+
     }
 
 
