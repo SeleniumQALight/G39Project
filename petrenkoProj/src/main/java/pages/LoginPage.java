@@ -12,7 +12,7 @@ public class LoginPage extends ParentPage{
 
     public LoginPage(WebDriver webDriver) {
 
-        super(webDriver);
+        super(webDriver, "/login");
     }
 
     @FindBy(name = "_username")
@@ -59,7 +59,7 @@ public class LoginPage extends ParentPage{
 //            Assert.fail("Can not wthis element");
 //
 //        }
-        actionsWithOurElements.enterTextInput(inputLogin, pass);
+        actionsWithOurElements.enterTextInput(inputPass, pass);
     }
 
 
@@ -74,5 +74,17 @@ public class LoginPage extends ParentPage{
             Assert.fail("Can not wthis element");
 
         }
+    }
+
+    public void loginWithCred(String login, String pass) {
+        openPage();
+        checkCurrentUrl();
+        enterTextInToInputLogin(login);
+        enterTextInToInputPass(pass);
+        clickOnButtonVhod();
+    }
+
+    public void validLogin() {
+        loginWithCred("Student", "909090");
     }
 }

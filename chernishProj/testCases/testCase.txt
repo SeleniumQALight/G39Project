@@ -13,7 +13,14 @@ Case2
 Edit the entity in Dictionaries->Apparatus
 1. Open main page http://v3.test.itpmgroup.com/. —> Page is opened
 2. Go to Dictionaries->Apparatus —> Page http://v3.test.itpmgroup.com/dictionary/apparat is opened. List of entries created previously is visible and scrollable
+<<<<<<< HEAD
+3. Try to find previously created entity with ID 123 and comment “test comment”. If it exists, Click on it. -> Editing window opened
+3.1 Try to find previously created entity with ID 123 and comment “test comment”. If it doesn`t exists, Press “+” (add) -> Page for creation new entity is opened (http://v3.test.itpmgroup.com/dictionary/apparat/edit).
+3.2 Fill number to the field “Apparat number” (123 - for example) and fill text to the field “Apparat comment” (test comment - for example). Press “Create” —> New entity with ID 123 and comment “test comment” is visible in the list on the page http://v3.test.itpmgroup.com/dictionary/apparat
+3.3 Try to find previously created entity with ID 123 and comment “test comment”. If it exists, Click on it. -> Editing window opened
+=======
 3. Choose previously created entity with ID 123 and comment “test comment”. Click on it. —> Editing window opened
+>>>>>>> ef43e03c2fe9fb5c1467b22cab5dc6a7273ccc83
 4. Change nothing. Press “Save”—> Page http://v3.test.itpmgroup.com/dictionary/apparat is opened. List of entries created previously is visible and scrollable
 5. Choose previously created entity with ID 123 and comment “test comment”. Click on it. —> Editing window opened
 6. Change comment to “test editing”. Press “Save” —> For current entity comment was changed to “test editing”. Page http://v3.test.itpmgroup.com/dictionary/apparat is opened. List of entries created previously is visible and scrollable
@@ -22,11 +29,14 @@ Case3
 Delete the entity in Dictionaries->Apparatus
 1. Open main page http://v3.test.itpmgroup.com/. —> Page is opened
 2. Go to Dictionaries->Apparatus —> Page http://v3.test.itpmgroup.com/dictionary/apparat is opened. List of entries created previously is visible and scrollable
-3. Choose previously created entity with ID 123 and comment “test comment”. Click on it. —> Editing window opened
+3. Try to find previously created entity with ID 123 and comment “test comment”. If it exists, Click on it. -> Editing window opened
+3.1 Try to find previously created entity with ID 123 and comment “test comment”. If it doesn`t exists, Press “+” (add) -> Page for creation new entity is opened (http://v3.test.itpmgroup.com/dictionary/apparat/edit).
+3.2 Fill number to the field “Apparat number” (123 - for example) and fill text to the field “Apparat comment” (test comment - for example). Press “Create” —> New entity with ID 123 and comment “test comment” is visible in the list on the page http://v3.test.itpmgroup.com/dictionary/apparat
+3.3 Try to find previously created entity with ID 123 and comment “test comment”. If it exists, Click on it. -> Editing window opened
 4. Press “Delete” —>Entity was deleted. Page http://v3.test.itpmgroup.com/dictionary/apparat is opened. List of entries created previously is visible and scrollable
 5. Refresh page http://v3.test.itpmgroup.com/dictionary/apparat is opened. —>Deleted entity doesn’t appear in the list
 
-
+//test
 Case4
 Creation of new entity in the Deals list
 1. Open main page http://v3.test.itpmgroup.com/. —> Page is opened

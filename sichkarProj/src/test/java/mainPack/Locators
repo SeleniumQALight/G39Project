@@ -16,7 +16,7 @@ NewEmployee.Submit.button = tagName("button")
 
 ----------------------------------------------
 #New spare
-Newspare.item."Словари"= .//*[@id="dictionary"]
+Newspare.item."Словари"= .//*[@id="dictionary"]/a
 Newspare.sub-item"Запчаcти" = xpath(.//*[@id="spares"]/a)
 Newspare.Add.button = xpath(.//*[@class="btn btn-info btn-sm"])
 Newspare.Spare name.input = xpath(.//*[@id="spares_spareName"])

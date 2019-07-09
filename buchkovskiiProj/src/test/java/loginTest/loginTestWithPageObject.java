@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class loginTestWithPageObject extends ParentTest {
 
     @Test
-    public  void validLogin(){
+    public void validLogin() {
         loginPage.openPage();
         loginPage.enterTextInToInputLogin("Student");
         loginPage.enterTextInToInputPassword("909090");
@@ -26,17 +26,10 @@ public class loginTestWithPageObject extends ParentTest {
     }
 
     @Test
-    public  void invalidLogin(){
-        loginPage.openPage();
-        HomePage homePage = new HomePage(webDriver);
-        webDriver.findElement(By.name("_username")).clear();
-        webDriver.findElement(By.name("_username")).sendKeys("Student");
-        webDriver.findElement(By.id("password")).clear();
-        webDriver.findElement(By.id("password")).sendKeys("000000");
-        webDriver.findElement(By.tagName("button")).click();
-
-        Assert.assertFalse("Avatar isn't present", homePage.isAvatarPresent());
-        //webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed()
+    public void invalidLogin() {
+        loginPage.loginWithCred("Student", "906090");
+        checkExpectedResult("Avatar should not be present", false, homePage.isAvatarPresent());
     }
+
 
 }

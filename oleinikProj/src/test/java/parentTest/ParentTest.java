@@ -5,8 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.HomePage;
-import pages.LoginPage;
+import pages.*;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -15,6 +14,11 @@ public class ParentTest {
     WebDriver webDriver;
    protected LoginPage loginPage;
     protected HomePage homePage;
+    protected SparesPage sparesPage;
+    protected EditSparePage editSparePage;
+    protected ProvidersPage providersPage;
+    protected EditProvidersPage editProvidersPage;
+
     @Before
     public void setUp(){
         File file = new File("./src/old_drivers/chromedriver.exe");
@@ -27,6 +31,10 @@ public class ParentTest {
 
         loginPage = new LoginPage(webDriver);
         homePage = new HomePage(webDriver);
+        sparesPage = new SparesPage(webDriver);
+        editSparePage = new EditSparePage(webDriver);
+        providersPage = new ProvidersPage(webDriver);
+        editProvidersPage = new EditProvidersPage(webDriver);
     }
 
     @After
@@ -37,11 +45,4 @@ public class ParentTest {
     public void checkExpectedResult (String message, boolean expectedResult, boolean actualResult){
         Assert.assertEquals(message, expectedResult, actualResult);
     }
-
-
-
-//    public void checkExpectedResult (String message, boolean actualResult){
-//        checkExpectedResult();
-//    }
-
 }

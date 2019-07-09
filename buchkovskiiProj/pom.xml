@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>G39Project</artifactId>
-    <groupId>G39Project</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
+
 
   <groupId>buchkovskiiProj</groupId>
   <artifactId>buchkovskiiProj</artifactId>
@@ -42,6 +38,24 @@
       <version>1.2.17</version>
     </dependency>
 
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.6</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ru.yandex.qatools.htmlelements</groupId>
+      <artifactId>htmlelements-java</artifactId>
+      <version>1.18</version> <!-- 1.18+ is SELENIUM 3.5.1+ compatible -->
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.aeonbits.owner/owner -->
+    <dependency>
+      <groupId>org.aeonbits.owner</groupId>
+      <artifactId>owner</artifactId>
+      <version>1.0.4</version>
+    </dependency>
 
   </dependencies>
 
@@ -94,7 +108,14 @@
       <resource>
         <directory>src/main/java/resources</directory>
       </resource>
+      <resource>
+        <directory>src/main/java/</directory>
+      </resource>
     </resources>
+
+
+
+
 
   </build>
 </project>

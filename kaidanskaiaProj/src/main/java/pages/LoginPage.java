@@ -5,18 +5,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.element.TextInput;
 
 public class LoginPage extends ParentPage{
 
     public LoginPage(WebDriver webDriver) {
-        super(webDriver);
+        super(webDriver, "/login");
     }
 
     @FindBy(name="_username")
-    private WebElement inputLogin;
+    private TextInput inputLogin;
 
     @FindBy(id = "password")
-    private WebElement inputPassword;
+    private TextInput inputPassword;
 
     @FindBy(tagName = "button")
     private WebElement buttonVhod;
@@ -80,5 +81,17 @@ public class LoginPage extends ParentPage{
             logger.error("Can not work with element");
             Assert.fail("Can not work with  element");
         }
+    }
+
+    public void loginWithCred(String login, String password) {
+        openPage();
+        checkCurrentUrl();
+        enterTextIntoInputLogin(login);
+        enterTextIntoInputPassword(password);
+        clickOnButtonVhod();
+    }
+
+    public void validLogin() {
+        loginWithCred("Student", "909090");
     }
 }
