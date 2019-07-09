@@ -7,7 +7,7 @@ import parentTest.ParentTest;
 
 public class AddNewSpareTest extends ParentTest {
     final String spareName = "BuchkivskyiSpare_" + Utils.getDateAndTimeFormated();
-    final String spareType = "Механикa ";
+    final String spareType = "jkh";
 
 
     @Test

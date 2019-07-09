@@ -86,7 +86,7 @@ public class ActionsWithOutElements {
     public void selectTextInDDByJava(WebElement dropDown, String text) {
         try {
             Select select = new Select(dropDown);
-            select.deselectByVisibleText(text);
+            select.selectByVisibleText(text);
             logger.info(text + " was selecte in DD");
         } catch (Exception e) {
             logger.error("Can't work with element");
