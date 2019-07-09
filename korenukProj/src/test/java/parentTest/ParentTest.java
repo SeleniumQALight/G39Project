@@ -5,10 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.EditSparePage;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.SparesPage;
+import pages.*;
 
 import javax.xml.transform.Result;
 import java.io.File;
@@ -20,6 +17,9 @@ public class ParentTest {
     protected HomePage homePage;
     protected SparesPage sparesPage;
     protected EditSparePage editSparePage;
+    protected ProvidersPage providersPage;
+    protected EditProviderPage editProviderPage;
+
 
     @Before
     public void setUp(){
@@ -35,6 +35,10 @@ public class ParentTest {
         homePage= new HomePage(webDriver);
         sparesPage= new SparesPage(webDriver);
         editSparePage= new EditSparePage(webDriver);
+        providersPage= new ProvidersPage(webDriver);
+        editProviderPage= new EditProviderPage(webDriver);
+
+
 
     }
 
