@@ -13,9 +13,12 @@ public class EditSparePage extends ParentPage {
     private WebElement typeDropDown;
     @FindBy (tagName = "button")
     private WebElement buttonCreate;
+    @FindBy(name = "delete")
+    private WebElement buttonDelete;
 
     public EditSparePage(WebDriver webDriver) {
-        super(webDriver);
+
+        super(webDriver, "/dictionary/spares/edit(|/\\d{1,})");
     }
 
     public void enterSpareName(String spareName ){
@@ -36,5 +39,8 @@ public class EditSparePage extends ParentPage {
         }
     }
 
+    public void clickOnButtonDelete() {
+                actionsWithOurElements.clickOnElement(buttonDelete);
     }
+}
 

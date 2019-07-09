@@ -6,16 +6,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.element.TextInput;
 
 public class LoginPage extends ParentPage {
     public LoginPage(WebDriver webDriver) {
-        super(webDriver);
-
+        super(webDriver, "/login");
     }
+
     @FindBy(name="_username")
-     private WebElement inputLogin;
+    private TextInput inputLogin;
     @FindBy(id="password")
-    private WebElement inputPass;
+    private TextInput inputPass;
     @FindBy (tagName = "button")
     private WebElement buttonVhod;
 
@@ -69,7 +70,7 @@ public class LoginPage extends ParentPage {
 
     public void clickOnButtonVhod() {
         try{
-  //          WebElement buttonVhod=webDriver.findElement(By.tagName("button"));
+           WebElement buttonVhod=webDriver.findElement(By.tagName("button"));
             buttonVhod.click();
             logger.info("Button vhod was clicked");
         } catch (Exception e) {
@@ -80,6 +81,7 @@ public class LoginPage extends ParentPage {
 
     public void loginWithCred(String login, String pass) {
         openPage();
+        checkCurrentUrl();
         enterTextIntoInputLogin(login);
         enterTextInToInputPass(pass);
         clickOnButtonVhod();

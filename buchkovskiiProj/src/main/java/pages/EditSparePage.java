@@ -11,24 +11,32 @@ public class EditSparePage extends ParentPage {
     private WebElement spareNameField;
 
     @FindBy(xpath = ".//button[@type='submit']")
-    private WebElement create;
+    private WebElement buttonCreate;
 
     @FindBy(xpath = ".//select[@id='spares_spareType']")
-    private WebElement typeDD;
+    private WebElement spareTypeDD;
+
+    @FindBy(name = "delete")
+    private WebElement buttonDelete;
 
     public EditSparePage(WebDriver webDriver) {
-        super(webDriver);
+       super(webDriver, "/dictionary/spares/edit(|/\\d{1,})");
     }
+
     public void enterSpareName(String spareName) {
         actionsWithOutElements.enterTextIntoInput(spareNameField, spareName);
     }
 
     public void clickOnButtonCreate() {
-        actionsWithOutElements.clickOnElement(create);
+        actionsWithOutElements.clickOnElement(buttonCreate);
     }
 
     public void selectSpareTypeFromDropdown(String spareType) {
-        actionsWithOutElements.selectTextInDD(typeDD, spareType);
+        actionsWithOutElements.selectTextInDD(spareTypeDD, spareType);
     }
 
+    public void clickOnButtonDelete() {
+        actionsWithOutElements.clickOnElement(buttonDelete);
+
+    }
 }
