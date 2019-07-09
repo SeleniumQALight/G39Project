@@ -35,7 +35,8 @@ public class ParentTest {
         editSparePage = new EditSparePage(webDriver);
         providersPage = new ProvidersPage(webDriver);
         editProviderPage = new EditProviderPage(webDriver);
-}
+    }
+
 
     @After
     public void  after(){
