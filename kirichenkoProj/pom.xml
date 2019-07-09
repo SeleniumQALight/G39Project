@@ -56,9 +56,25 @@
     </dependency>
 
 
+    <!-- https://mvnrepository.com/artifact/org.aeonbits.owner/owner -->
+    <dependency>
+      <groupId>org.aeonbits.owner</groupId>
+      <artifactId>owner</artifactId>
+      <version>1.0.4</version>
+    </dependency>
 
 
-      <dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>3.14</version>
+    </dependency>
+
+
+
+
+    <dependency>
           <groupId>org.seleniumhq.selenium</groupId>
           <artifactId>selenium-chrome-driver</artifactId>
           <version>3.14.0</version>
@@ -116,7 +132,14 @@
       <resource>
         <directory>src/main/java/resources</directory>
       </resource>
+      <resource>
+        <directory>src/main/java</directory>
+      </resource>
     </resources>
+
+
+
+
 
   </build>
 </project>
