@@ -9,8 +9,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ru.yandex.qatools.htmlelements.element.TypifiedElement;
 
 import javax.xml.soap.Text;
+import java.lang.reflect.Type;
 
 public class ActionsWithOurElements {
     WebDriver webDriver;
@@ -133,5 +135,19 @@ public class ActionsWithOurElements {
             Assert.fail("Can not work with element");
         }
         }
+    public void enterTextIntoInput(TypifiedElement element, String text) {
+        this.webDriver= webDriver;
+        wait10= new WebDriverWait(webDriver,10);
+        wait15 = new WebDriverWait(webDriver,15);
+        try {
+            element.clear();
+            element.sendKeys(text);
+            logger.info(text + "was inputted into Login"+  element.getName());
 
+        } catch (Exception e) {
+
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
+        }
+    }
 }
