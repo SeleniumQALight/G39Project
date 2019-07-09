@@ -102,8 +102,9 @@ public class ActionsWithOurElements {
         }    }
 
     public void setStatusToCheck(WebElement checkBox,String status){
+        logger.info("Status: " + status.toLowerCase());
         boolean isStatusCheck = "check".equals(status.toLowerCase());
-        boolean isStatusUncheck = "unckeck".equals(status.toLowerCase());
+        boolean isStatusUncheck = "uncheck".equals(status.toLowerCase());
         if (isStatusCheck||isStatusUncheck){
 
             if (checkBox.isSelected() && isStatusCheck){

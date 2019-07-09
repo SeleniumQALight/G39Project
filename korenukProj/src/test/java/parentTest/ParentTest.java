@@ -35,6 +35,10 @@ public class ParentTest {
         homePage= new HomePage(webDriver);
         sparesPage= new SparesPage(webDriver);
         editSparePage= new EditSparePage(webDriver);
+        providersPage= new ProvidersPage(webDriver);
+        editProviderPage= new EditProviderPage(webDriver);
+
+
 
     }
 
