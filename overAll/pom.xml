@@ -62,7 +62,12 @@
       <artifactId>poi</artifactId>
       <version>3.14</version>
     </dependency>
-
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.18</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -113,6 +118,9 @@
     <resources>
       <resource>
         <directory>src/main/java/resources</directory>
+      </resource>
+      <resource>
+        <directory>src/main/java</directory>
       </resource>
     </resources>
 
