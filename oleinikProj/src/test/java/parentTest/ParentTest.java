@@ -7,6 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.*;
 
 import java.io.File;
@@ -37,6 +40,14 @@ public class ParentTest {
             profile.addPreference("browser.startup.page",0);
             profile.addPreference("browser.startup.homepage_overdrive.mstone", "ignore");//Suppress the "What's new" page
             webDriver = new FirefoxDriver();
+        }else if ("iedriver".equals(browser)) {
+            File file1 = new File("./src/drivers/IEDriverServer.exe");
+            System.setProperty("webdriver.ie.driver", file1.getAbsolutePath());
+            DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+            capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+            capabilities.setCapability("ignoreZoomSetting", true);
+            capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+            webDriver = new InternetExplorerDriver();
         }
 
         webDriver.manage().window().maximize();
