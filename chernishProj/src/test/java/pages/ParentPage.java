@@ -18,7 +18,7 @@ abstract public class ParentPage {
     Logger logger = Logger.getLogger(getClass());
     ActionsWithOurElements actionWithOurElements;
 
-    protected static ConfigProperties configProperties = ConfigFactory.create(ConfigProperties.class);
+    public static ConfigProperties configProperties = ConfigFactory.create(ConfigProperties.class);
 
     String baseUrl;
     String expectedUrl;
