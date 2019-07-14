@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WrapsDriver;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.annotations.Name;
+import ru.yandex.qatools.htmlelements.element.TextInput;
 
 public class LoginPage extends ParentPage {
     public LoginPage(WebDriver webDriver) {
@@ -13,9 +15,10 @@ public class LoginPage extends ParentPage {
     }
 
     @FindBy(name = "_username")
-    private WebElement inputLogin;
+//    @Name(value = "inputLogin")
+    private TextInput inputLogin;
     @FindBy(id = "password")
-    private WebElement inputPass;
+    private TextInput inputPass;
     @FindBy(tagName = "button")
     private WebElement buttonVhod;
 
