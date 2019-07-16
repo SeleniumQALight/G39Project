@@ -3,7 +3,6 @@ package spares;
 import libs.Utils;
 import org.junit.After;
 import org.junit.Test;
-import pages.EditSparePage;
 import parentTest.ParentTest;
 
 public class AddNewSpareTest extends ParentTest {

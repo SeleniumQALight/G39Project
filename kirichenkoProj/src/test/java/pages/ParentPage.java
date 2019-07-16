@@ -1,10 +1,14 @@
 package pages;
 
 import libs.ActionsWithOurElements;
+import libs.ConfigProperties;
+import org.aeonbits.owner.ConfigFactory;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementDecorator;
+import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementLocatorFactory;
 
 import java.util.regex.Pattern;
 
@@ -12,16 +16,20 @@ abstract public class ParentPage {
     WebDriver webDriver;
     Logger logger = Logger.getLogger(getClass());
     static ActionsWithOurElements actionsWithOurElements;
-    final String BASE_URL = "http://v3.test.itpmgroup.com";
+    public static ConfigProperties configProperties = ConfigFactory.create(ConfigProperties.class);
+    String baseUrl;
     String expectedUrl;
 
 
     public ParentPage(WebDriver webDriver, String partUrl) {
         this.webDriver = webDriver;
-        PageFactory.initElements(webDriver,
-                this);
+         baseUrl = configProperties.base_url();
+       // baseUrl = "http://v3.test.itpmgroup.com";
+        //PageFactory.initElements(webDriver,
+               // this);
+        PageFactory.initElements(new HtmlElementDecorator(new HtmlElementLocatorFactory(webDriver)),this);
         actionsWithOurElements = new ActionsWithOurElements(webDriver);
-        expectedUrl = BASE_URL + partUrl;
+        expectedUrl = baseUrl + partUrl;
 
     }
 
