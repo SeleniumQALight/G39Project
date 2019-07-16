@@ -64,6 +64,7 @@ final String providerPhone = "My_phone";
         editProvidersPage.clickOnButtonCreate();
 
         providersPage.checkCurrentUrl();
+        providersPage.checkLablIsOurFirm(provaiderName);
 
         checkExpectedResult("Can not find provider in list",
                 true, providersPage.isProviderInList(provaiderName));

@@ -23,23 +23,11 @@ public class ActionsWithOurElements {
         wait15 = new WebDriverWait(webDriver, 15);
     }
 
-
-    public void enterTextInToInput(WebElement element, String text){
-        try {
-            element.clear();
-            element.sendKeys(text);
-            logger.info(text + " was inputted into input");
-        } catch (Exception e) {
-            logger.error("Can not work with element");
-            Assert.fail("Can not work with element");
-        }
-    }
-
     public void enterTextInToInput(TypifiedElement element, String text){
         try {
             element.clear();
             element.sendKeys(text);
-            logger.info(text + " was inputted into input " + element.getName());
+            logger.info(text + " was inputted into " + element.getName());
         } catch (Exception e) {
             logger.error("Can not work with element");
             Assert.fail("Can not work with element");
@@ -57,9 +45,21 @@ public class ActionsWithOurElements {
         }
     }
 
-    public void selectTextInDD (WebElement dropDown, String text) {
+    public void clickOnElement(TypifiedElement webElement) {
+        try{
+            wait10.until(ExpectedConditions.elementToBeClickable(webElement));
+            webElement.click();
+            logger.info("Element" + " " + webElement.getName() + " " + "was clicked" );
+        }catch (Exception e) {
+            logger.error("Can not work with element");
+            Assert.fail("Can not work with element");
+        }
+    }
+
+    public void selectTextInDD (TypifiedElement dropDown, String text) {
         clickOnElement(dropDown);
         clickOnElement(".//*[text()='" + text + "']");
+        logger.info(text + " " + "was selected in" + " " + dropDown);
     }
 
 
@@ -106,18 +106,18 @@ public class ActionsWithOurElements {
         }
     }
 
-    public  void setStatusToCheckbox(WebElement checkBox, String status){
+    public  void setStatusToCheckbox(TypifiedElement checkBox, String status){
         boolean isStatusCheck = "check".equals(status.toLowerCase());
         boolean isStatusUncheck = "uncheck".equals(status.toLowerCase());
         if( isStatusCheck|| isStatusUncheck){
            if(checkBox.isSelected() && isStatusCheck){
-    logger.info("CheckBox is already checked");
+    logger.info("CheckBox" + " " + checkBox.getName() + " " + "is already checked");
             }else if(checkBox.isSelected() && isStatusCheck) {
                clickOnElement(checkBox);
            }else if(!checkBox.isSelected() && isStatusCheck) {
                clickOnElement(checkBox);
            }else if(!checkBox.isSelected() && isStatusUncheck){
-               logger.info("CheckBox is already uncheck");
+               logger.info("CheckBox" + " " + checkBox.getName() + " " + "is already uncheck");
            }
         }else {
             Assert.fail("Status should be 'check' or 'uncheck'");

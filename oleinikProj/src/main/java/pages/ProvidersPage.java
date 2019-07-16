@@ -5,11 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.element.Button;
 
 public class ProvidersPage extends ParentPage {
 
     @FindBy(xpath = ".//*[@class='fa fa-plus']")
-    private WebElement buttonAdd;
+    private Button buttonAdd;
 
     public ProvidersPage (WebDriver webDriver){
         super(webDriver, "/dictionary/providers");
@@ -46,6 +47,11 @@ public class ProvidersPage extends ParentPage {
     public void checkLablPrivatePerson(String provaiderName) {
         Assert.assertEquals("Label physical person not installed","1",
                 webDriver.findElement(By.xpath
+                (".//tr[td='" + provaiderName + "' and td='My_address' and td='My_phone']//td[4]")).getText());
+    }
+
+    public void checkLablIsOurFirm(String provaiderName) {
+        Assert.assertEquals("Label is our firm not installed","",webDriver.findElement(By.xpath
                 (".//tr[td='" + provaiderName + "' and td='My_address' and td='My_phone']//td[4]")).getText());
     }
 }
