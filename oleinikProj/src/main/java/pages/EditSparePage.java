@@ -3,18 +3,22 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.annotations.Name;
+import ru.yandex.qatools.htmlelements.element.Button;
+import ru.yandex.qatools.htmlelements.element.TextBlock;
+import ru.yandex.qatools.htmlelements.element.TextInput;
 
 public class EditSparePage extends ParentPage  {
 
+    @Name("dropDown")
     @FindBy(xpath=".//select[@id='spares_spareType']")
-    private WebElement spareDD;
+    private TextBlock spareDD;
     @FindBy(xpath=".//input[@id='spares_spareName']")
-    private WebElement inputSpareName;
+    private TextInput inputSpareName;
     @FindBy(xpath=".//button[@name='add']")
-    private WebElement buttonCreate;
+    private Button buttonCreate;
     @FindBy(name = "delete")
-
-    private WebElement buttonDelete;
+    private Button buttonDelete;
 
     public EditSparePage(WebDriver webDriver) {
         super(webDriver, "/dictionary/spares/edit(|/\\d{1,})");
