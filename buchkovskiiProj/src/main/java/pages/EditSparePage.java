@@ -32,7 +32,7 @@ public class EditSparePage extends ParentPage {
     }
 
     public void selectSpareTypeFromDropdown(String spareType) {
-        actionsWithOutElements.selectTextInDD(spareTypeDD, spareType);
+        actionsWithOutElements.selectTextInDDByJava(spareTypeDD, spareType);
     }
 
     public void clickOnButtonDelete() {
