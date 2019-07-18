@@ -4,6 +4,7 @@ import Pages.EditSparePage;
 import Pages.HomePage;
 import Pages.LoginPage;
 import Pages.SparesPage;
+import io.qameta.allure.Step;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -62,7 +63,7 @@ public class ParentTest {
     public void tearDown() {
         webDriver.quit();
     }
-
+    @Step
     public void checkExpectedResult(String message, boolean expectedResult
             , boolean actualResult){
         Assert.assertEquals(message, expectedResult, actualResult);

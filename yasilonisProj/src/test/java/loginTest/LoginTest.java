@@ -1,6 +1,7 @@
 package loginTest;
 
 import Pages.HomePage;
+import io.qameta.allure.Step;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -27,6 +28,7 @@ public class LoginTest {
     }
 
     @Test
+    @Step
     public void validLogIn() {
 
 
