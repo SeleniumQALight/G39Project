@@ -13,6 +13,8 @@ import static io.restassured.RestAssured.given;
 import static libs.Utils.getDateAndTimeFormated;
 
 public class ApiTest {
+
+
     @Test
     public void privateBankTest() {
         CurrencyValues[] currencyValues =
@@ -33,6 +35,8 @@ public class ApiTest {
         for (CurrencyValues currencyElement : currencyValues) {
             System.out.println("Cur " + currencyElement.ccy + " to " + currencyElement.base_ccy + " has for buy " + currencyElement.buy + " and for sale " + currencyElement.sale);
         }
+
+
 
     }
 
@@ -59,7 +63,7 @@ public class ApiTest {
                     .extract()
                     .response().getBody();
 
-        Assert.assertEquals("Correct Success code was returned", response.jsonPath().get("SuccessCode"), "OPERATION_SUCCESS");
+        Assert.assertEquals("Correct Success code was returned", response.jsonPath().get("SuccessCode"), "OPERATION_SUCCESS1");
 
     }
 
