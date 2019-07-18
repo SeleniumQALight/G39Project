@@ -1,5 +1,6 @@
 package parentTest;
 
+import io.qameta.allure.Step;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -64,6 +65,7 @@ public class ParentTest {
         webDriver.quit();
     }
 
+@Step
     public void checkExpetedResult(String message, boolean expectedResult, boolean actualResult){
         Assert.assertEquals(message, expectedResult, actualResult);
 

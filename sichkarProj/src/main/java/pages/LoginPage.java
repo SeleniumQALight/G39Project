@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +21,7 @@ public class LoginPage extends ParentPage {
     @FindBy(tagName = "button")
     private WebElement buttonVhod;
 
-
+@Step
     public void openPage(){
         try {
             webDriver.get("http://v3.test.itpmgroup.com");
@@ -31,6 +32,7 @@ public class LoginPage extends ParentPage {
         }
     }
 
+@Step
     public void enterTextInToInputLogin(String login) {
 //        try {
 //        //    WebElement inputLogin =  webDriver.findElement(By.name("_username"));
@@ -43,7 +45,7 @@ public class LoginPage extends ParentPage {
 
         actionsWithOurElements.enterTextInToInput(inputLogin, login);
     }
-
+@Step
     public void enterTextInToInputPassword(String pass) {
 
         actionsWithOurElements.enterTextInToInput(inputPass, pass);
@@ -60,7 +62,7 @@ public class LoginPage extends ParentPage {
 //            Assert.fail("Can not work with element");
 //        }
     }
-
+@Step
     public void clickOnButtonVhod() {
         try {
      //       WebElement buttonVhod = webDriver.findElement(By.tagName("button"));
@@ -71,7 +73,7 @@ public class LoginPage extends ParentPage {
             Assert.fail("Can not work with element");
         }
     }
-
+@Step
     public void loginWithCred(String login,
                               String pass) {
         openPage();
@@ -80,7 +82,7 @@ public class LoginPage extends ParentPage {
         enterTextInToInputPassword(pass);
         clickOnButtonVhod();
     }
-
+@Step
     public void validLogin() {
         loginWithCred("Student", "909090");
     }
