@@ -1,0 +1,24 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class SparesPage extends ParentPage {
+    @FindBy(
+            xpath = ".//*[@class='fa fa-plus']"
+    )
+    private WebElement buttonAdd;
+
+    public SparesPage(WebDriver webDriver) {
+        super(webDriver);
+    }
+
+    public void clickOnButtonAdd() {
+        this.actionWithOurElements.clickOnElement(this.buttonAdd);
+    }
+
+    public boolean isSpareInList(String spareName) {
+        return this.actionWithOurElements.isElementDispalyed(".//*[text()='" + spareName + "']");
+    }
+}

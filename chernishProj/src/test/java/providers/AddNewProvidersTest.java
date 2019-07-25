@@ -1,4 +1,4 @@
-package providers;
+/*package providers;
 
 import libs.Utils;
 import org.junit.After;
@@ -40,4 +40,4 @@ public class AddNewProvidersTest extends ParentTest {
     public void deleteProvider(){
         providersPage.deleteProvidersUntilPresent(providerName);
     }
-}
+}*/
