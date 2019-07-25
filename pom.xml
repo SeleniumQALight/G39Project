@@ -93,5 +93,6 @@
     <module>iacilenisProj</module>
     <module>kirichenkoProj</module>
     <module>yasilonisProj</module>
+    <module>jBehaveProject</module>
   </modules>
 </project>
