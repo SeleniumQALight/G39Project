@@ -1,6 +1,7 @@
 package libs;
 
 
+import io.qameta.allure.Step;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -57,7 +58,7 @@ public class ActionsWithOurElements {
 
 
 
-
+        @Step
 
     public void clickOnElement(WebElement webElement) {
         try {
@@ -69,7 +70,7 @@ public class ActionsWithOurElements {
             Assert.fail("Can not work with element");
         }
     }
-
+        @Step
     public void clickOnElement(String locator) {
         try {
             clickOnElement(webDriver.findElement(By.xpath(locator)));
