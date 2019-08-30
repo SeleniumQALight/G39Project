@@ -3,19 +3,24 @@ package parentTest;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.EditSparePage;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.SparesPage;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class ParentTest {
@@ -52,6 +57,20 @@ public class ParentTest {
             capabilities.setCapability("ignoreZoomSetting", true);
             capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
             webDriver = new InternetExplorerDriver();
+        }else if ("remote".equals(browser)){
+            try {
+                DesiredCapabilities cap=new DesiredCapabilities();
+                cap.setBrowserName("chrome");
+                cap.setPlatform(Platform.WINDOWS);
+                cap.setVersion("32");
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.merge(cap);
+                webDriver = new RemoteWebDriver(
+                        new URL("http://localhost:4444/wd/hub"),
+                        chromeOptions);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
         }
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
