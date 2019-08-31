@@ -1,9 +1,17 @@
 package parentTest;
 
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
+import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Rule;
+import org.junit.rules.TestWatcher;
+import org.junit.runner.Description;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -26,6 +34,7 @@ import java.util.concurrent.TimeUnit;
 public class ParentTest {
     WebDriver webDriver;
     String browser = System.getProperty("browser");
+    Logger logger = Logger.getLogger(getClass());
 
     protected LoginPage loginPage;
     protected HomePage homePage;
@@ -73,7 +82,7 @@ public class ParentTest {
             }
         }
         webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
         loginPage = new LoginPage(webDriver);
         homePage = new HomePage(webDriver);
@@ -83,10 +92,10 @@ public class ParentTest {
 
     @After
     public void tearDown(){
-        webDriver.quit();
+//        webDriver.quit();
     }
 
-
+    @Step
     public void checkExpectedResult(String message, boolean expectedResult
             , boolean actualResult){
         Assert.assertEquals(message, expectedResult, actualResult);
@@ -95,5 +104,33 @@ public class ParentTest {
 //    public void checkExpectedResult(String message, boolean actualResult){
 //        checkExpectedResult();
 //    }
+
+    @Rule
+    public TestWatcher watchman = new TestWatcher() {
+        @Override
+        protected void failed(Throwable e, Description description) {
+            screenshot();
+        }
+        @Attachment(value = "Page screenshot", type = "image/png")
+        public byte[] saveScreenshot(byte[] screenShot) {
+            return screenShot;
+        }
+        public void screenshot() {
+            if (webDriver == null) {
+                logger.info("Driver for screenshot not found");
+                return;
+            }
+            saveScreenshot(((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BYTES));
+        }
+        @Override
+        protected void finished(Description description) {
+            logger.info(String.format("Finished test: %s::%s", description.getClassName(), description.getMethodName()));
+            try {
+                webDriver.quit();
+            } catch (Exception e) {
+                logger.error(e);
+            }
+        }
+    };
 
 }

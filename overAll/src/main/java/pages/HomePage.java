@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +20,7 @@ public class HomePage extends ParentPage{
         super(webDriver, "/");
     }
 
+    @Step
     public boolean isAvatarPresent(){
         return actionsWithOurElements.isElementDisplayed(avatar);
     }
