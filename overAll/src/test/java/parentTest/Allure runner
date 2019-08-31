@@ -1,0 +1,1 @@
+clean test -Dtest=LoginTestWithPageObject allure:report -Dmaven.test.failure.ignore=true
