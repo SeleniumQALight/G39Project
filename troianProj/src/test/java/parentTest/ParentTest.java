@@ -16,8 +16,8 @@ public class ParentTest {
     protected HomePage homePage;
     //Precondition
     @Before
-    public void setUp() {
-        File file = new File("./src/olddrivers/chromedriver.exe");
+    public void setUp(){
+        File file = new File("./src/driver/chromedriver");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 
         webDriver = new ChromeDriver();

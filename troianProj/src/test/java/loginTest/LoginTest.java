@@ -17,7 +17,7 @@ public class LoginTest {
 //Precondition
     @Before
     public void setUp(){
-        File file = new File("./src/olddrivers/chromedriver.exe");
+        File file = new File("./src/driver/chromedriver");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 
          webDriver = new ChromeDriver();
@@ -38,7 +38,7 @@ public class LoginTest {
         webDriver.findElement(By.name("_username")).sendKeys("Student");
 //Pass
         webDriver.findElement(By.id("password")).clear();
-        webDriver.findElement(By.id("password")).sendKeys("909090");
+        webDriver.findElement(By.id("password")).sendKeys("9090901");
 //clickMouse
         webDriver.findElement(By.tagName("button")).click();
 
